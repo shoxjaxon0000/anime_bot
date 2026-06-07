@@ -1,4 +1,3 @@
-import asyncio
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 from telegram.ext import (
@@ -10,25 +9,15 @@ from telegram.ext import (
     filters,
 )
 
-# ─────────────────────────────────────────────
-# ✏️ SOZLAMALAR
-# ─────────────────────────────────────────────
-
 BOT_TOKEN = "8890938686:AAGAI677Up8O3M8xcdEJtf9l4rBfbN5368Y"
 BOT_USERNAME = "@Animez1_bot"
-
-# ─────────────────────────────────────────────
-# RASM FILE_ID OLISH:
-# Botga rasm yuboring → bot PHOTO FILE_ID ni beradi
-# Shu file_id ni "rasm" maydoniga kiriting
-# ─────────────────────────────────────────────
 
 ANIMALAR = [
     {
         "nomi": "Shiliq",
         "emoji": "🎌",
         "tavsif": "Shiliq anime — barcha qismlar",
-        "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAOmaiQ-TTBlJTedh37EJ1lQCALOTMsAAuikAAKe2yFJceK8xOoUnHY7BA"),
             ("2-qism",  "BAACAgIAAxkBAAOsaiRVgiGA_oaWELYMhoCC5GSLDyUAAgOmAAKe2yFJUW4ZKdcuJqg7BA"),
@@ -60,7 +49,7 @@ ANIMALAR = [
         "nomi": "Shiliq kundaligi",
         "emoji": "🎌",
         "tavsif": "Shiliq anime — barcha qismlar",
-        "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
             ("2-qism",  "BAACAgIAAxkBAAPCaiRbZPHM6wFvC-PATQR7ghDhTmUAAmKmAAKe2yFJN7McGc5YrH07BA"),
@@ -76,21 +65,10 @@ ANIMALAR = [
             ("12-qism", "BAACAgIAAxkBAAPWaiRfuW3vkHYTVTdkbokOLYc1PoIAAqGmAAKe2yFJjtHX4pBHaIw7BA"),
         ],
     },
-    # Keyingi anime qo'shish uchun:
-    # {
-    #     "nomi": "Boshqa Anime",
-    #     "emoji": "⭐",
-    #     "tavsif": "Tavsif matni",
-    #     "rasm": "PHOTO_FILE_ID_BU_YERGA",
-    #     "qismlar": [
-    #         ("1-qism", "FILE_ID_BU_YERGA"),
-    #     ],
-    # },
 ]
 
 USTUN_SONI = 4
 
-# ─────────────────────────────────────────────
 logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
     level=logging.INFO,
@@ -104,19 +82,13 @@ def qismlar_klaviaturasi(anime_index: int):
         InlineKeyboardButton(f"▶️ {nom}", callback_data=f"video_{anime_index}_{i}")
         for i, (nom, _) in enumerate(anime["qismlar"])
     ]
-    keyboard = [
-        barcha[i : i + USTUN_SONI]
-        for i in range(0, len(barcha), USTUN_SONI)
-    ]
+    keyboard = [barcha[i: i + USTUN_SONI] for i in range(0, len(barcha), USTUN_SONI)]
     return InlineKeyboardMarkup(keyboard)
 
 
 def animalar_klaviaturasi():
     keyboard = [
-        [InlineKeyboardButton(
-            f"{a['emoji']} {a['nomi']}",
-            callback_data=f"anime_{i}"
-        )]
+        [InlineKeyboardButton(f"{a['emoji']} {a['nomi']}", callback_data=f"anime_{i}")]
         for i, a in enumerate(ANIMALAR)
     ]
     return InlineKeyboardMarkup(keyboard)
@@ -147,10 +119,7 @@ async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=Fals
     else:
         if rasm and not rasm.startswith("PHOTO_FILE_ID"):
             await update_or_message.reply_photo(
-                photo=rasm,
-                caption=matn,
-                parse_mode="Markdown",
-                reply_markup=markup,
+                photo=rasm, caption=matn, parse_mode="Markdown", reply_markup=markup,
             )
         else:
             await update_or_message.reply_text(matn, parse_mode="Markdown", reply_markup=markup)
@@ -158,7 +127,6 @@ async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=Fals
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     args = context.args
-
     if args and args[0].startswith("anime_"):
         try:
             anime_index = int(args[0].split("_")[1])
@@ -167,10 +135,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 return
         except (ValueError, IndexError):
             pass
-
     await update.message.reply_text(
-        "🎌 Anime botiga *xush kelibsiz!*",
-        parse_mode="Markdown",
+        "🎌 Anime botiga *xush kelibsiz!*", parse_mode="Markdown",
     )
 
 
@@ -183,11 +149,9 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         try:
             parts = data.split("_")
             anime_index = int(parts[1])
-            qism_index  = int(parts[2])
-
+            qism_index = int(parts[2])
             anime = ANIMALAR[anime_index]
             qism_nomi, file_id = anime["qismlar"][qism_index]
-
             await query.message.reply_video(
                 video=file_id,
                 caption=(
@@ -196,7 +160,6 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 ),
                 parse_mode="Markdown",
             )
-
         except (ValueError, IndexError) as e:
             logger.error(f"video_ xatolik: {e}")
             await query.answer("❌ Xatolik yuz berdi!", show_alert=True)
@@ -221,31 +184,19 @@ async def get_file_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.video:
         file_id = update.message.video.file_id
         await update.message.reply_text(
-            f"✅ *VIDEO FILE\\_ID:*\n`{file_id}`\n\n"
-            f"⬆️ Shu file\\_id ni ANIMALAR ichiga kiriting.",
-            parse_mode="Markdown",
+            f"✅ *VIDEO FILE\\_ID:*\n`{file_id}`", parse_mode="Markdown",
         )
     elif update.message.photo:
         file_id = update.message.photo[-1].file_id
         await update.message.reply_text(
-            f"✅ *PHOTO FILE\\_ID:*\n`{file_id}`\n\n"
-            f"⬆️ Shu file\\_id ni ANIMALAR ichidagi *'rasm'* maydoniga kiriting.",
-            parse_mode="Markdown",
+            f"✅ *PHOTO FILE\\_ID:*\n`{file_id}`", parse_mode="Markdown",
         )
 
 
-def main():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
+if __name__ == "__main__":
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, get_file_id))
-
     logger.info("Bot ishga tushdi ✅")
-    app.run_polling(allowed_updates=Update.ALL_TYPES, close_loop=False)
-
-
-if __name__ == "__main__":
-    main()
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
