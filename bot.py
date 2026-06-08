@@ -76,6 +76,20 @@ ANIMALAR = [
             ("12-qism", "BAACAgIAAxkBAAPWaiRfuW3vkHYTVTdkbokOLYc1PoIAAqGmAAKe2yFJjtHX4pBHaIw7BA"),
         ],
     },
+     {
+        "nomi": "Shiliq ovili",
+        "emoji": "🎌",
+        "tavsif": "Shiliq anime — barcha qismlar",
+        "rasm": "AgACAgIAAxkBAAIBd2omphyLh1KmnPXAoC7wV_WMKjBoAAIO6DEb-gchSFGocVPl0u0bAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism",  "BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
+            ("2-qism",  "BAACAgIAAxkBAAPCaiRbZPHM6wFvC-PATQR7ghDhTmUAAmKmAAKe2yFJN7McGc5YrH07BA"),
+            ("3-qism",  "BAACAgIAAxkBAAPEaiRbdj_p3z1RztvPpIVSc5PcGn4AAmamAAKe2yFJuDMIfuwrWhg7BA"),
+            ("4-qism",  "BAACAgIAAxkBAAPMaiReoOSbioskpal7ElxF1OHKTGoAAoumAAKe2yFJwjcfI0MAAS4rOwQ"),
+            ("5-qism",  "BAACAgIAAxkBAAPOaiRexmgBu-9i01iGt_dzU_0GvhYAAo6mAAKe2yFJ94nPI85-gGw7BA"),
+            ("6-qism",  "BAACAgIAAxkBAAPYaiRf0bKXIo99U8ZUMoNmUbyh4XYAAqOmAAKe2yFJaJ8BYgsz7lc7BA"),
+        ],
+    },
     # Keyingi anime qo'shish uchun:
     # {
     #     "nomi": "Boshqa Anime",
