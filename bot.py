@@ -82,12 +82,12 @@ ANIMALAR = [
         "tavsif": "Shiliq anime — barcha qismlar",
         "rasm": "AgACAgIAAxkBAAIBd2omphyLh1KmnPXAoC7wV_WMKjBoAAIO6DEb-gchSFGocVPl0u0bAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
-            ("1-qism",  "BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
-            ("2-qism",  "BAACAgIAAxkBAAPCaiRbZPHM6wFvC-PATQR7ghDhTmUAAmKmAAKe2yFJN7McGc5YrH07BA"),
-            ("3-qism",  "BAACAgIAAxkBAAPEaiRbdj_p3z1RztvPpIVSc5PcGn4AAmamAAKe2yFJuDMIfuwrWhg7BA"),
-            ("4-qism",  "BAACAgIAAxkBAAPMaiReoOSbioskpal7ElxF1OHKTGoAAoumAAKe2yFJwjcfI0MAAS4rOwQ"),
-            ("5-qism",  "BAACAgIAAxkBAAPOaiRexmgBu-9i01iGt_dzU_0GvhYAAo6mAAKe2yFJ94nPI85-gGw7BA"),
-            ("6-qism",  "BAACAgIAAxkBAAPYaiRf0bKXIo99U8ZUMoNmUbyh4XYAAqOmAAKe2yFJaJ8BYgsz7lc7BA"),
+            ("1-qism",  "BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
+            ("2-qism",  "BAACAgIAAxkBAAIBhmomp0Jr_Zu3XuRpvEuchw_JB4W2AAK0XwACXfoYSPCboS8kzJLJOwQ"),
+            ("3-qism",  "BAACAgIAAxkBAAIBiGomp2dXQEvOAAF1kJnmRNDW7LpGngACuV8AAl36GEhNinWFR0n7azsE"),
+            ("4-qism",  "BAACAgIAAxkBAAIBimomp8xRRubyVFPn738XT3T-3SzLAAK-XwACXfoYSC1NkKzLD68NOwQ"),
+            ("5-qism",  "BAACAgIAAxkBAAIBjGomp9SO2PTKgd0rG5ZaMjG6PaOiAALFXwACXfoYSLpgPhbBioy6OwQ"),
+            ("6-qism",  "BAACAgIAAxkBAAIBjmomp9mXibY0VXxkLrMS5eNAwCkjAALLXwACXfoYSNXPB6UAAZL4kjsE"),
         ],
     },
     # Keyingi anime qo'shish uchun:
