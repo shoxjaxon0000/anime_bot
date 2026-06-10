@@ -1,14 +1,14 @@
-import asyncio
-import logging
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
+
+# YANGI:
 from telegram.ext import (
     ApplicationBuilder,
     CommandHandler,
     CallbackQueryHandler,
     MessageHandler,
     ContextTypes,
-    filters,
 )
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
+from telegram.ext import filters
 
 # ─────────────────────────────────────────────
 # ✏️ SOZLAMALAR
@@ -344,16 +344,13 @@ async def get_file_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, get_file_id))
 
     logger.info("Bot ishga tushdi ✅")
-    app.run_polling(allowed_updates=Update.ALL_TYPES, close_loop=False)
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
 if __name__ == "__main__":
