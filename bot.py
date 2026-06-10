@@ -27,8 +27,8 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "Yili: 2021",
-        "sifat": "Sifat: 720p, 1080p",
+        "yili": 2018",
+        "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAOmaiQ-TTBlJTedh37EJ1lQCALOTMsAAuikAAKe2yFJceK8xOoUnHY7BA"),
@@ -58,10 +58,10 @@ ANIMALAR = [
         ],
     },
     {
-        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "nomi": "Shilliq kundaligi",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "Yili: 2021",
-        "sifat": "Sifat: 720p, 1080p",
+        "yili": "2018",
+        "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
@@ -79,9 +79,9 @@ ANIMALAR = [
         ],
     },
      {
-        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "Yili: 2021",
+        "yili": "Yili: 2018 kuz",
         "sifat": "Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
@@ -94,10 +94,10 @@ ANIMALAR = [
         ],
     },
      {
-        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "Yili: 2021",
-        "sifat": "Sifat: 720p, 1080p",
+        "yili": "2021",
+        "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBvWoppbN_ejcyww49xlN9pU9N5NKJAAJIHWsbTV5JSQkMzSdDep9YAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBv2oppkgGdXg47WBrysDFt5dB-bnbAALPXwACXfoYSGQKhXihPWsqOwQ"),
@@ -118,12 +118,67 @@ ANIMALAR = [
             ("16-qism","BAACAgIAAxkBAAIB3WopqFLmQb5k_Nxm-nV5SDM-WwMKAAKZYAACXfoYSPWjivFBN1ukOwQ"),
             ("17-qism","BAACAgIAAxkBAAIB32opqFfksoPxQnYLj313deerSuszAAKfYAACXfoYSCbl42E2U26rOwQ"),
             ("18-qism","BAACAgIAAxkBAAIB4WopqFu2B9jpYLQrnxWZIg7jRqxwAAKpYAACXfoYSJw456BrjEqsOwQ"),
-            ("19-qism",""),
-            ("20-qism",""),
-            ("21-qism",""),
-            ("22-qism",""),
-            ("23-qism",""),
-            ("24-qism",""),
+            ("19-qism","BAACAgIAAxkBAAICK2op0GM1Q-FGW-nHPvwNtftTeMDjAAKwYAACXfoYSH4qeJXAqDokOwQ"),
+            ("20-qism","BAACAgIAAxkBAAICLWop0GnO-OI442XAc1zhGjl9gSecAAK4YAACXfoYSLM3sI_CnpEuOwQ"),
+            ("21-qism","BAACAgIAAxkBAAICL2op0G1hhbJMpHrmVsAWQiOXGLbrAALgYAACXfoYSPS4cNse57ooOwQ"),
+            ("22-qism","BAACAgIAAxkBAAICMWop0HJbKxSkaaeFrYzkW85hA5WgAALkYAACXfoYSPAFj7HqC-yHOwQ"),
+            ("23-qism","BAACAgIAAxkBAAICM2op0HfVNmzggqwE95x3DvVpRfmnAALsYAACXfoYSNAlw9JU9NiMOwQ"),
+            ("24-qism","BAACAgIAAxkBAAICNWop0H31rIcy50J3oRAxIp_TdIH3AAIGYQACXfoYSP-F3EPAwfZfOwQ"),
+        ],
+    },
+    {
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovli 2 fasl",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "2023",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAICN2op0S7JDCROzCB5VFhFsQfAbiiaAAJmFWsbu-nRSjeA4rz6UTxMAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism","BAACAgIAAxkBAAICOWop0TXvZCz9od1PeQ16flxFCwW7AAIsYQACXfoYSPX1fZ2x2hDfOwQ"),
+            ("2-qism","BAACAgIAAxkBAAICO2op0TpHUBWjx5uYQNVU-nuU-UpLAAIvYQACXfoYSBtCxnwzdjwAATsE"),
+            ("3-qism","BAACAgIAAxkBAAICPWop0UDF6_rLXhjqJneOqSXXako2AAI8YQACXfoYSI-hg3n27cCOOwQ"),
+        ],
+    },
+    {
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1-film",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "2024",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAICP2op0ctKketzAuGUqhuBNQXIp1JjAAJtFWsbu-nRSi7ZwOHn3fscAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-flim","BAACAgIAAxkBAAICQWop0dA0YlJQ2iZ4BzYVccJq9hMpAAJtYQACXfoYSOwCOCyTCB8-OwQ"),
+        ],
+    },
+    {
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 3 fasl",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "2024",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAICQ2op08ahCNXUvXa-0EaiKdczEEkFAAJ2FWsbu-nRSt0XVDI8PIZqAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism","BAACAgIAAxkBAAICRWop09Sr9f6UE36e9ISkSu5e7NQcAAJwYQACXfoYSG8wBvVT6vpMOwQ"),
+            ("2-qism","BAACAgIAAxkBAAICRmop09QOtR_4lze3uK8UtjKNBUWmAAJ3YQACXfoYSM3nWoBPhgevOwQ"),
+            ("3-qism","BAACAgIAAxkBAAICR2op09S8-KxhM3RZD4roKC_WK2OpAAJ5YQACXfoYSFYHOXBvP_v-OwQ"),
+            ("4-qism","BAACAgIAAxkBAAICUWop1AoO5vwo9J_FZF1qSOLzNuR1AAKBYQACXfoYSHwJaPepZ7tsOwQ"),
+            ("5-qism","BAACAgIAAxkBAAICU2op1A-PsDN4oJAUYosflJPEWb5bAAKDYQACXfoYSPM3vA1FZYpEOwQ"),
+            ("6-qism","BAACAgIAAxkBAAICVWop1BQx3SLvz3grMX4AAU5-e-ORuAAClmEAAl36GEiYUfhoAVsHJzsE"),
+            ("7-qism","BAACAgIAAxkBAAICV2op1Boo9PEQ3IQPimnkRa5sfKS8AAKZYQACXfoYSAho6Gb9i7xKOwQ"),
+            ("8-qism","BAACAgIAAxkBAAICWWop1D0eT-1Nu-qII84nyXZ36jlzAAK7YQACXfoYSPFyov568sIYOwQ"),
+            ("9-qism","BAACAgIAAxkBAAICW2op1TpTngcTISg_2ogj9JJ26mm4AAK-YQACXfoYSDgR1ddjw2BMOwQ"),
+            ("10-qism","BAACAgIAAxkBAAICXWop1UE5J8uYF9gsvbY9m9fAA1crAALDYQACXfoYSAgr_4uhcHzROwQ"),
+            ("11-qism","BAACAgIAAxkBAAICX2op1UeQlAHV1paxoV-VTsexjGHQAALGYQACXfoYSPxWVr6Y12R-OwQ"),
+            ("12-qism","BAACAgIAAxkBAAICYWop1UzVoXcLNyDr19t29ncKds0AA-ZhAAJd-hhIOkv_kUW6z0k7BA"),
+            ("13-qism","BAACAgIAAxkBAAICY2op1VL2zWOEnjxZAihzunO2JJYjAAL0YQACXfoYSEk8VGWm3cMaOwQ"),
+            ("14-qism","BAACAgIAAxkBAAICZWop1VcLgyaFb9DhoQUBUX1rQjmoAANiAAJd-hhIgESocC0W5YA7BA"),
+            ("15-qism","BAACAgIAAxkBAAICZ2op1VsFSRSM_C_JKpNn4sVkq-GIAAIEYgACXfoYSHjdBxoAAersAzsE"),
+            ("16-qism","BAACAgIAAxkBAAICaWop1WGDQVAeieiWSnsyPdTSnWceAAIFYgACXfoYSH0R1y97gn87OwQ"),
+            ("17-qism","BAACAgIAAxkBAAICa2op1ePAj9CDKlJfkLBaNhm-_ry2AAIJYgACXfoYSMhx_O4sndYXOwQ"),
+            ("18-qism","BAACAgIAAxkBAAICbWop1ej7rbtHtcDfxcoVJ_BIhsm9AAIMYgACXfoYSAQuIc60nFk2OwQ"),
+            ("19-qism","BAACAgIAAxkBAAICb2op1eysab-7-05fzyyryEiFruyXAAIOYgACXfoYSHBROt74dXSYOwQ"),
+            ("20-qism","BAACAgIAAxkBAAICcWop1fG2jCDsCQJdCr1hZqhuwUxAAAIQYgACXfoYSMOZ09mtJbMuOwQ"),
+            ("21-qism","BAACAgIAAxkBAAICc2op1fbnyrjmaGjFExsc9la2HZOfAAISYgACXfoYSMnJnm4S9MDnOwQ"),
+            ("22-qism","BAACAgIAAxkBAAICdWop1fvV41XBR97wnb2JtnCWFSGIAAITYgACXfoYSFdJd0foYjgWOwQ"),
+            ("23-qism","BAACAgIAAxkBAAICd2op1gAB4cnBgrIzsU4vBOGFWgqWRQACFWIAAl36GEiAuc2mU3IoKjsE"),
+            ("24-qism","BAACAgIAAxkBAAICeWop1gaIW9P4Lm9NJWOWpuZQ1pydAAIWYgACXfoYSOyW0HEZHDBCOwQ"),
         ],
     },
     # Keyingi anime qo'shish uchun:
