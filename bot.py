@@ -77,7 +77,7 @@ ANIMALAR = [
             ("11-qism","BAACAgIAAxkBAAPGaiReCqI0E-WhF-POS4VjjPwWZPEAAoGmAAKe2yFJWSNa_Kc7F4U7BA"),
             ("12-qism","BAACAgIAAxkBAAPWaiRfuW3vkHYTVTdkbokOLYc1PoIAAqGmAAKe2yFJjtHX4pBHaIw7BA"),
         ],
-    },
+     },
      {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
@@ -92,7 +92,7 @@ ANIMALAR = [
             ("5-qism","BAACAgIAAxkBAAIBjGomp9SO2PTKgd0rG5ZaMjG6PaOiAALFXwACXfoYSLpgPhbBioy6OwQ"),
             ("6-qism","BAACAgIAAxkBAAIBjmomp9mXibY0VXxkLrMS5eNAwCkjAALLXwACXfoYSNXPB6UAAZL4kjsE"),
         ],
-    },
+     },
      {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
