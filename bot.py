@@ -242,8 +242,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.message.reply_video(
                 video=file_id,
                 caption=(
-                    f"{anime['emoji']} *{anime['nomi']}* — {qism_nomi}\n\n"
-                    f"▶️ Davom etish uchun keyingi qismni tanlang 👇"
+                    f"Nomi: *{anime['nomi']}*\n\n"
+                    f"Qism: {qism_nomi}\n\n"
+                    f"Janrlari: *{anime['janrlari']}*\n\n"
+                    f"Yili: *{anime['yili']}*\n\n"
+                    f"Sifat: *{anime['sifat']}*\n\n"                
                 ),
                 parse_mode="Markdown",
             )
