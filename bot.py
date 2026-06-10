@@ -80,7 +80,7 @@ ANIMALAR = [
         "nomi": "Shiliq ovili",
         "emoji": "🎌",
         "tavsif": "Shiliq anime — barcha qismlar",
-        "rasm": "AgACAgIAAxkBAAIBd2omphyLh1KmnPXAoC7wV_WMKjBoAAIO6DEb-gchSFGocVPl0u0bAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
             ("2-qism",  "BAACAgIAAxkBAAIBhmomp0Jr_Zu3XuRpvEuchw_JB4W2AAK0XwACXfoYSPCboS8kzJLJOwQ"),
@@ -88,6 +88,38 @@ ANIMALAR = [
             ("4-qism",  "BAACAgIAAxkBAAIBimomp8xRRubyVFPn738XT3T-3SzLAAK-XwACXfoYSC1NkKzLD68NOwQ"),
             ("5-qism",  "BAACAgIAAxkBAAIBjGomp9SO2PTKgd0rG5ZaMjG6PaOiAALFXwACXfoYSLpgPhbBioy6OwQ"),
             ("6-qism",  "BAACAgIAAxkBAAIBjmomp9mXibY0VXxkLrMS5eNAwCkjAALLXwACXfoYSNXPB6UAAZL4kjsE"),
+        ],
+    },
+     {
+        "nomi": "Shiliq 2fasl",
+        "emoji": "🎌",
+        "tavsif": "Shiliq anime — barcha qismlar",
+        "rasm": "AgACAgIAAxkBAAIBvWoppbN_ejcyww49xlN9pU9N5NKJAAJIHWsbTV5JSQkMzSdDep9YAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism",  "BAACAgIAAxkBAAIBv2oppkgGdXg47WBrysDFt5dB-bnbAALPXwACXfoYSGQKhXihPWsqOwQ"),
+            ("2-qism",  "BAACAgIAAxkBAAIBwWopplP9Ef0H2fzNCmLSJ7ljIAkRAALUXwACXfoYSJmgUL-KEVhsOwQ"),
+            ("3-qism",  "BAACAgIAAxkBAAIBw2opplmTLwXZm2NWrwyLXVa3xs5DAALhXwACXfoYSMInYfQfba17OwQ"),
+            ("4-qism",  "BAACAgIAAxkBAAIBxWoppq-vfjeJRm_79YTUIg3H0AtnAALzXwACXfoYSJYcuCNpjttEOwQ"),
+            ("5-qism",  "BAACAgIAAxkBAAIBx2opprRiGg6FC5gZ5Cwd9y7gbeeDAAL3XwACXfoYSKQ3zRcWLVITOwQ"),
+            ("6-qism",  "BAACAgIAAxkBAAIByWopprnozyuPDqzJkfPGJ8LEXTGGAANgAAJd-hhIFJPEovKrtps7BA"),
+            ("7-qism",  "BAACAgIAAxkBAAIBy2opp2Ge25WdiBJrsiVHnXg3UnD_AAIhYAACXfoYSEvUSvR_OG1QOwQ"),
+            ("8-qism",  "BAACAgIAAxkBAAIBzWopp2boIsFS7YAzqmsktYlQTMRrAAIlYAACXfoYSHGxr1KMx2uqOwQ"),
+            ("9-qism",  "BAACAgIAAxkBAAIBz2opp2sntZSgnhWFX04UyMfXuMXCAAJBYAACXfoYSKLaIX6kUcu_OwQ"),
+            ("10-qism", "BAACAgIAAxkBAAIB0Wopp2_fqUYt3SfDiVw4uoswwgo6AAJHYAACXfoYSE9dGmAQ0jM8OwQ"),
+            ("11-qism", "BAACAgIAAxkBAAIB02opp3R2qod619Erguab1ov5EOIjAAJUYAACXfoYSGrGusZQRT-JOwQ"),
+            ("12-qism", "BAACAgIAAxkBAAIB1Wopp3i0W8ML-7pYBla0OCo3H4J_AAJmYAACXfoYSM5UFaWGQx1JOwQ"),
+            ("13-qism", "BAACAgIAAxkBAAIB12opqEGb8I19fhE4nTK8BrUxXX9jAAJwYAACXfoYSDAwCHSTCBm3OwQ"),
+            ("14-qism", "BAACAgIAAxkBAAIB2WopqEdg5p8OrwtjtotkI4IXnpLLAAJyYAACXfoYSE5_Dvpu_OzAOwQ"),
+            ("15-qism", "BAACAgIAAxkBAAIB22opqE2IEkF4WXU2VLTmtg_YBUdRAAKTYAACXfoYSL-SQ2nboYHgOwQ"),
+            ("16-qism", "BAACAgIAAxkBAAIB3WopqFLmQb5k_Nxm-nV5SDM-WwMKAAKZYAACXfoYSPWjivFBN1ukOwQ"),
+            ("17-qism", "BAACAgIAAxkBAAIB32opqFfksoPxQnYLj313deerSuszAAKfYAACXfoYSCbl42E2U26rOwQ"),
+            ("18-qism", "BAACAgIAAxkBAAIB4WopqFu2B9jpYLQrnxWZIg7jRqxwAAKpYAACXfoYSJw456BrjEqsOwQ"),
+            ("19-qism", ""),
+            ("20-qism", ""),
+            ("21-qism", ""),
+            ("22-qism", ""),
+            ("23-qism", ""),
+            ("24-qism", ""),
         ],
     },
     # Keyingi anime qo'shish uchun:
