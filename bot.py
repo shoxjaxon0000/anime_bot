@@ -25,9 +25,9 @@ BOT_USERNAME = "@Animez1_bot"
 
 ANIMALAR = [
     {
-        "nomi": "Shiliq",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
         "emoji": "🎌",
-        "tavsif": "Shiliq anime — barcha qismlar",
+        "tavsif": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action | Qism: 24 | Yili: 2021 | Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAOmaiQ-TTBlJTedh37EJ1lQCALOTMsAAuikAAKe2yFJceK8xOoUnHY7BA"),
