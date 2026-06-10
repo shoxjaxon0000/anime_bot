@@ -83,7 +83,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2018 kuz",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAICtWop5Td1O7yElo2Z87oN4a_7AAE0PgAC7BprG2znUElVnjXFc_wh2QEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
             ("2-qism","BAACAgIAAxkBAAIBhmomp0Jr_Zu3XuRpvEuchw_JB4W2AAK0XwACXfoYSPCboS8kzJLJOwQ"),
