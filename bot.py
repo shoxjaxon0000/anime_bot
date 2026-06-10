@@ -27,7 +27,7 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": 2018",
+        "yili": "2018",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
@@ -81,8 +81,8 @@ ANIMALAR = [
      {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "Yili: 2018 kuz",
-        "sifat": "Sifat: 720p, 1080p",
+        "yili": "2018 kuz",
+        "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
