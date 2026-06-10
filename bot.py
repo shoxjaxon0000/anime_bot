@@ -26,8 +26,9 @@ BOT_USERNAME = "@Animez1_bot"
 ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
-        "emoji": "🎌",
-        "tavsif": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action | Qism: 24 | Yili: 2021 | Sifat: 720p, 1080p",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "Yili: 2021",
+        "sifat": "Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAOmaiQ-TTBlJTedh37EJ1lQCALOTMsAAuikAAKe2yFJceK8xOoUnHY7BA"),
@@ -171,10 +172,11 @@ def animalar_klaviaturasi():
 async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=False):
     anime = ANIMALAR[anime_index]
     matn = (
-        f"{anime['emoji']} *{anime['nomi']}*\n\n"
-        f"📌 {anime['tavsif']}\n"
-        f"🎬 Jami: *{len(anime['qismlar'])} qism*\n\n"
-        f"👇 Qaysi qismni ko'rmoqchisiz?"
+        f"Nomi: {anime['nomi']}*\n\n"
+        f"Janrlari {anime['janrlari']}\n\n"
+        f"Yili {anime['yili']}\n\n"
+        f"Sifat {anime['sifat']}\n\n"
+        f"Qism: *{len(anime['qismlar'])}*\n\n"
     )
     markup = qismlar_klaviaturasi(anime_index)
     rasm = anime.get("rasm")
