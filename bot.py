@@ -58,9 +58,10 @@ ANIMALAR = [
         ],
     },
     {
-        "nomi": "Shiliq kundaligi",
-        "emoji": "🎌",
-        "tavsif": "Shiliq anime — barcha qismlar",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "Yili: 2021",
+        "sifat": "Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
@@ -78,9 +79,10 @@ ANIMALAR = [
         ],
     },
      {
-        "nomi": "Shiliq ovili",
-        "emoji": "🎌",
-        "tavsif": "Shiliq anime — barcha qismlar",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "Yili: 2021",
+        "sifat": "Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
@@ -92,9 +94,10 @@ ANIMALAR = [
         ],
     },
      {
-        "nomi": "Shiliq 2fasl",
-        "emoji": "🎌",
-        "tavsif": "Shiliq anime — barcha qismlar",
+        "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
+        "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
+        "yili": "Yili: 2021",
+        "sifat": "Sifat: 720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBvWoppbN_ejcyww49xlN9pU9N5NKJAAJIHWsbTV5JSQkMzSdDep9YAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism",  "BAACAgIAAxkBAAIBv2oppkgGdXg47WBrysDFt5dB-bnbAALPXwACXfoYSGQKhXihPWsqOwQ"),
@@ -172,10 +175,10 @@ def animalar_klaviaturasi():
 async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=False):
     anime = ANIMALAR[anime_index]
     matn = (
-        f"Nomi: {anime['nomi']}*\n\n"
-        f"Janrlari {anime['janrlari']}\n\n"
-        f"Yili {anime['yili']}\n\n"
-        f"Sifat {anime['sifat']}\n\n"
+        f"Nomi: *{anime['nomi']}*\n\n"
+        f"Janrlari: *{anime['janrlari']}*\n\n"
+        f"Yili: *{anime['yili']}*\n\n"
+        f"Sifat: *{anime['sifat']}*\n\n"
         f"Qism: *{len(anime['qismlar'])}*\n\n"
     )
     markup = qismlar_klaviaturasi(anime_index)
