@@ -219,7 +219,7 @@ def qismlar_klaviaturasi(anime_index: int):
 def animalar_klaviaturasi():
     keyboard = [
         [InlineKeyboardButton(
-            f"{a['emoji']} {a['nomi']}",
+            f"{a['nomi']}",
             callback_data=f"anime_{i}"
         )]
         for i, a in enumerate(ANIMALAR)
