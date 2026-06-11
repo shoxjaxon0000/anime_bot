@@ -77,13 +77,13 @@ ANIMALAR = [
             ("11-qism","BAACAgIAAxkBAAPGaiReCqI0E-WhF-POS4VjjPwWZPEAAoGmAAKe2yFJWSNa_Kc7F4U7BA"),
             ("12-qism","BAACAgIAAxkBAAPWaiRfuW3vkHYTVTdkbokOLYc1PoIAAqGmAAKe2yFJjtHX4pBHaIw7BA"),
         ],
-     },
+    },
      {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2018 kuz",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAICtWop5Td1O7yElo2Z87oN4a_7AAE0PgAC7BprG2znUElVnjXFc_wh2QEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
             ("2-qism","BAACAgIAAxkBAAIBhmomp0Jr_Zu3XuRpvEuchw_JB4W2AAK0XwACXfoYSPCboS8kzJLJOwQ"),
@@ -92,7 +92,7 @@ ANIMALAR = [
             ("5-qism","BAACAgIAAxkBAAIBjGomp9SO2PTKgd0rG5ZaMjG6PaOiAALFXwACXfoYSLpgPhbBioy6OwQ"),
             ("6-qism","BAACAgIAAxkBAAIBjmomp9mXibY0VXxkLrMS5eNAwCkjAALLXwACXfoYSNXPB6UAAZL4kjsE"),
         ],
-     },
+    },
      {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
@@ -344,13 +344,16 @@ async def get_file_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, get_file_id))
 
     logger.info("Bot ishga tushdi ✅")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    app.run_polling(allowed_updates=Update.ALL_TYPES, close_loop=False)
 
 
 if __name__ == "__main__":
