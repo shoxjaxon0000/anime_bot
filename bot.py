@@ -240,6 +240,27 @@ ANIMALAR = [
             # ("24-qism","BAACAgIAAxkBAAICeWop1gaIW9P4Lm9NJWOWpuZQ1pydAAIWYgACXfoYSOyW0HEZHDBCOwQ"),
         ],
     },
+        {
+        "nomi": "Tayoq va qilich 1 fasl",
+        "janrlari": "Janrlari: Sarguzasht, Ramantik",
+        "yili": "2025",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism","BAACAgQAAxkBAAIDXmoyXppvApUqAdFQ7N9X0VND0BAGAAIIHgAC3LWxUgSNea-cxv1UPAQ"),
+            ("2-qism","BAACAgIAAxkBAAIDYmoyXzXgDc3KfRCegG-6UeOmhotpAAI7owACeDnIStwpcFcdwzDvPAQ"),
+            ("3-qism","BAACAgQAAxkBAAIDZGoyX5kjAAFxgQ7CNCVMWRSEtw3oGQAC8RsAAhEpSFOXZdTxtpC2iDwE"),
+            ("4-qism","BAACAgQAAxkBAAIDZmoyX6MvCn17aXnFOo7hA_VesFDWAAIBHQACAsuZU_8MG9joplePPAQ"),
+            ("5-qism","BAACAgQAAxkBAAIDaGoyX6ko9ZmVEA9M6uVzxbQDLYY_AAJeHgACZW1BUE8Kt6vxxWVkPAQ"),
+            ("6-qism","BAACAgQAAxkBAAIDamoyX67KgME6nU_zHdNBnot16PVyAAJFHQACcotoUJ6YMfb0ab67PAQ"),
+            ("7-qism","BAACAgQAAxkBAAIDbGoyX7QmTue1iJAfLbvGI5FKkO8bAAK5HQACn-a4UMg4OJhADlchPAQ"),
+            ("8-qism","BAACAgQAAxkBAAIDbmoyX7jGsB__GzyzY9BsnWxy0gEuAAJvHQACNskYUY9RvxMhLkbJPAQ"),
+            ("9-qism","BAACAgQAAxkBAAIDcGoyX7283ez6nIn9E5u22mzWdqGJAAKpHwACls5QUXsqR1uO3MTXPAQ"),
+            ("10-qism","BAACAgQAAxkBAAIDcmoyX8JqgTW-cdTOw-pNoKwDpgrzAAJJHQACdAABYVHd7EEHh6f7jzwE"),
+            ("11-qism","BAACAgIAAxkBAAICX2op1UeQlAHV1paxoV-VTsexjGHQAALGYQACXfoYSPxWVr6Y12R-OwQ"),
+            ("12-qism","BAACAgIAAxkBAAICYWop1UzVoXcLNyDr19t29ncKds0AA-ZhAAJd-hhIOkv_kUW6z0k7BA"),
+        ],
+    },
     # Keyingi anime qo'shish uchun:
     # {
     #     "nomi": "Boshqa Anime",
