@@ -247,10 +247,10 @@ ANIMALAR = [
     },
         {
         "nomi": "Tayoq va qilich 1 fasl",
-        "janrlari": "Janrlari: Sarguzasht, Ramantik",
+        "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAyEFAATjg9gWAAMkajKpLhmsa1cM4yBXiLZ7PzMWsSIAAoUbaxvqG5hJIe-kQYbjsF4BAAMCAAN5AAM8BA",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIDeWoye5-HMgK8oiZfhWF1pZcWHaSvAAKkTwAC9GZgSFerAAFgvEpxwDwE"),
             ("2-qism","BAACAgIAAxkBAAIDe2oye6TSrDLRXBlGKAVNQVdCyQIfAAIEVgACPS_5SJFEHk5JXJaoPAQ"),
@@ -268,10 +268,10 @@ ANIMALAR = [
     },
          {
         "nomi": "Tayoq va qilich 2 fasl",
-        "janrlari": "Janrlari: Sarguzasht, Ramantik",
+        "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
         "yili": "2026",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAyEFAATjg9gWAAMlajKp0HdsF5pIgHJ0aDeCJypAze8AAoYbaxvqG5hJrii3a0kabN0BAAMCAAN5AAM8BA",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIDkWoynwXmlw2A4pHIKg-4D8WSF8x2AAJVlwADvOlKu5ciGwAB4GxePAQ"),
             ("2-qism","BAACAgEAAxkBAAIDk2oynwrW_OIirCl5cZWZ0s3_qPnpAAJ9BwACSCsoR5xdtQtKERGVPAQ"),
