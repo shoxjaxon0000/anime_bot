@@ -40,6 +40,11 @@ MAJBURIY_KANALLAR = [
         "url": "https://t.me/Animeztv1",     # ← obuna havolasi
         "name": "📢 Kanalimiz",                  # ← tugma nomi
     },
+    {
+        "channel_id": -1004095884973,          # ← o'zingizning kanal ID'ingizni kiriting
+        "url": "https://t.me/homeproduct1566",     # ← obuna havolasi
+        "name": "📢 Kanalimiz",                  # ← tugma nomi
+    },
 ]
 
 # ─────────────────────────────────────────────
@@ -247,18 +252,39 @@ ANIMALAR = [
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
-            ("1-qism","BAACAgQAAxkBAAIDXmoyXppvApUqAdFQ7N9X0VND0BAGAAIIHgAC3LWxUgSNea-cxv1UPAQ"),
-            ("2-qism","BAACAgIAAxkBAAIDYmoyXzXgDc3KfRCegG-6UeOmhotpAAI7owACeDnIStwpcFcdwzDvPAQ"),
-            ("3-qism","BAACAgQAAxkBAAIDZGoyX5kjAAFxgQ7CNCVMWRSEtw3oGQAC8RsAAhEpSFOXZdTxtpC2iDwE"),
-            ("4-qism","BAACAgQAAxkBAAIDZmoyX6MvCn17aXnFOo7hA_VesFDWAAIBHQACAsuZU_8MG9joplePPAQ"),
-            ("5-qism","BAACAgQAAxkBAAIDaGoyX6ko9ZmVEA9M6uVzxbQDLYY_AAJeHgACZW1BUE8Kt6vxxWVkPAQ"),
-            ("6-qism","BAACAgQAAxkBAAIDamoyX67KgME6nU_zHdNBnot16PVyAAJFHQACcotoUJ6YMfb0ab67PAQ"),
-            ("7-qism","BAACAgQAAxkBAAIDbGoyX7QmTue1iJAfLbvGI5FKkO8bAAK5HQACn-a4UMg4OJhADlchPAQ"),
-            ("8-qism","BAACAgQAAxkBAAIDbmoyX7jGsB__GzyzY9BsnWxy0gEuAAJvHQACNskYUY9RvxMhLkbJPAQ"),
-            ("9-qism","BAACAgQAAxkBAAIDcGoyX7283ez6nIn9E5u22mzWdqGJAAKpHwACls5QUXsqR1uO3MTXPAQ"),
-            ("10-qism","BAACAgQAAxkBAAIDcmoyX8JqgTW-cdTOw-pNoKwDpgrzAAJJHQACdAABYVHd7EEHh6f7jzwE"),
-            ("11-qism","BAACAgIAAxkBAAICX2op1UeQlAHV1paxoV-VTsexjGHQAALGYQACXfoYSPxWVr6Y12R-OwQ"),
-            ("12-qism","BAACAgIAAxkBAAICYWop1UzVoXcLNyDr19t29ncKds0AA-ZhAAJd-hhIOkv_kUW6z0k7BA"),
+            ("1-qism","BAACAgIAAxkBAAIDeWoye5-HMgK8oiZfhWF1pZcWHaSvAAKkTwAC9GZgSFerAAFgvEpxwDwE"),
+            ("2-qism","BAACAgIAAxkBAAIDe2oye6TSrDLRXBlGKAVNQVdCyQIfAAIEVgACPS_5SJFEHk5JXJaoPAQ"),
+            ("3-qism","BAACAgIAAxkBAAIDfWoye6n3_-B_1R5QflOdPUUy2McrAAIHVgACPS_5SHQJKc81tSMsPAQ"),
+            ("4-qism","BAACAgIAAxkBAAIDf2oye67ROxw-IgNtJCVe0T1CnG7FAAI-TQACgzfBSe_zeLaYmLPiPAQ"),
+            ("5-qism","BAACAgEAAxkBAAIDgWoye7TKD7BCfGX-xwb2uIxsmZyQAAJ5BQACCnEYRhoDojhxmSg2PAQ"),
+            ("6-qism","BAACAgEAAxkBAAIDg2oye7l5Nsmh4mnejexV4C-b9CbIAAKIAwACfp0gRmabGeCf3LcuPAQ"),
+            ("7-qism","BAACAgEAAxkBAAIDhWoynfz7mOcm90SsWZ4dMD5EWbkjAAIqBQACoHVoRr7tWLShJ3BvPAQ"),
+            ("8-qism","BAACAgEAAxkBAAIDh2oyngJif1C266ImV9jmW-Jue8EbAAJ4AwACvXZZR7gnvlBt8_1hPAQ"),
+            ("9-qism","BAACAgEAAxkBAAIDiWoyngveFhlKeeDw68i5sH3h4osBAALlBAACmb2oR-Xaty_atJnHPAQ"),
+            ("10-qism","BAACAgEAAxkBAAIDi2oynhLvN8CJgNWQAphqlGvD36IfAAK0BAACmb24R90PxFxiiYTzPAQ"),
+            ("11-qism","BAACAgEAAxkBAAIDjWoynhgf9I6M9Iw69Q7-WdopHaheAALvCAACixvJRw4q72mggWzcPAQ"),
+            ("12-qism","BAACAgEAAxkBAAIDj2oynh5NxI1gHt81IEQhpb1wpbcuAAL6CAACixvJRy-hzT2Kv99jPAQ"),
+        ],
+    },
+         {
+        "nomi": "Tayoq va qilich 2 fasl",
+        "janrlari": "Janrlari: Sarguzasht, Ramantik",
+        "yili": "2026",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "qismlar": [
+            ("1-qism","BAACAgIAAxkBAAIDkWoynwXmlw2A4pHIKg-4D8WSF8x2AAJVlwADvOlKu5ciGwAB4GxePAQ"),
+            ("2-qism","BAACAgEAAxkBAAIDk2oynwrW_OIirCl5cZWZ0s3_qPnpAAJ9BwACSCsoR5xdtQtKERGVPAQ"),
+            ("3-qism","BAACAgEAAxkBAAIDk2oynwrW_OIirCl5cZWZ0s3_qPnpAAJ9BwACSCsoR5xdtQtKERGVPAQ"),
+            ("4-qism","BAACAgEAAxkBAAIDl2oynxXHR0irwlM6C48zuL14k4paAAL-BQACjyy4RytUUTQa7cfEPAQ"),
+            ("5-qism","BAACAgIAAxkBAAIDmWoynxrJGNwzjCfW-_P7Qo01XqxGAAJUpQAC4agISPqPSqWIJZIFPAQ"),
+            ("6-qism","BAACAgIAAxkBAAIDmWoynxrJGNwzjCfW-_P7Qo01XqxGAAJUpQAC4agISPqPSqWIJZIFPAQ"),
+            ("7-qism","BAACAgQAAxkBAAIDnWoynyV5RVfGgVY--tZgntuPfj9FAALLIwACVRixUPqExRzLlFiQPAQ"),
+            ("8-qism","BAACAgIAAxkBAAIDn2oynzJFBmTAiobNZRoNaU85NINxAAKynQACoIQgSen5HzZP8CLGPAQ"),
+            ("9-qism","BAACAgIAAxkBAAIDoWoynzrBf-0PftDfulaXR5b-P215AAJDmwACU1V5SeMc8v-upFECPAQ"),
+            ("10-qism","BAACAgIAAxkBAAIDo2oyn0BlNRZQhkESbLeSQ0F6UYddAALFqgACqRp4SeBMxPQ_L4bfPAQ"),
+            # ("11-qism","BAACAgEAAxkBAAIDjWoynhgf9I6M9Iw69Q7-WdopHaheAALvCAACixvJRw4q72mggWzcPAQ"),
+            # ("12-qism","BAACAgEAAxkBAAIDj2oynh5NxI1gHt81IEQhpb1wpbcuAAL6CAACixvJRy-hzT2Kv99jPAQ"),
         ],
     },
     # Keyingi anime qo'shish uchun:
