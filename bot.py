@@ -1,6 +1,8 @@
 import asyncio
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
+from telegram.constants import ChatMemberStatus
+from telegram.error import BadRequest, Forbidden
 from telegram.ext import (
     ApplicationBuilder,
     CommandHandler,
@@ -14,8 +16,31 @@ from telegram.ext import (
 # ✏️ SOZLAMALAR
 # ─────────────────────────────────────────────
 
-BOT_TOKEN = "8890938686:AAGAI677Up8O3M8xcdEJtf9l4rBfbN5368Y"
+BOT_TOKEN = "8890938686:AAF35bXN90eNd2fRUFje12sZS0cL9LNDf7o"
 BOT_USERNAME = "@Animez1_bot"
+
+# ─────────────────────────────────────────────
+# 📢 MAJBURIY OBUNA SOZLAMALARI
+# ─────────────────────────────────────────────
+# Bot kanalga ADMIN qilib qo'shilgan bo'lishi SHART, aks holda
+# a'zolikni tekshira olmaydi.
+#
+# CHANNEL_ID  -> kanalning ID raqami (masalan: -1001234567890)
+#                Buni bilish uchun: kanalga biror xabarni botga forward qiling
+#                yoki @username_to_id_bot kabi yordamchi botlardan foydalaning.
+# CHANNEL_URL -> foydalanuvchi bosadigan obuna havolasi (https://t.me/...)
+# CHANNEL_NAME-> tugmada ko'rinadigan nom
+#
+# Yana kanal qo'shish kerak bo'lsa, shu ro'yxatga yana bitta dict qo'shing.
+# ─────────────────────────────────────────────
+
+MAJBURIY_KANALLAR = [
+    {
+        "channel_id": -1001234567890,          # ← o'zingizning kanal ID'ingizni kiriting
+        "url": "https://t.me/your_channel",     # ← obuna havolasi
+        "name": "📢 Kanalimiz",                  # ← tugma nomi
+    },
+]
 
 # ─────────────────────────────────────────────
 # RASM FILE_ID OLISH:
@@ -203,6 +228,79 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# ═════════════════════════════════════════════
+# 📢 MAJBURIY OBUNA YORDAMCHI FUNKSIYALARI
+# ═════════════════════════════════════════════
+
+OBUNA_BOLMAGAN_HOLATLAR = {
+    ChatMemberStatus.LEFT,
+    ChatMemberStatus.BANNED,
+}
+
+
+async def obunani_tekshir(user_id: int, context: ContextTypes.DEFAULT_TYPE) -> list:
+    """
+    Foydalanuvchini barcha majburiy kanallarga a'zoligini tekshiradi.
+    Qaytaradi: a'zo BO'LMAGAN kanallar ro'yxati (bo'sh ro'yxat = hammasiga a'zo).
+    """
+    obuna_bolmagan = []
+
+    for kanal in MAJBURIY_KANALLAR:
+        try:
+            a_zo = await context.bot.get_chat_member(
+                chat_id=kanal["channel_id"], user_id=user_id
+            )
+            if a_zo.status in OBUNA_BOLMAGAN_HOLATLAR:
+                obuna_bolmagan.append(kanal)
+        except BadRequest as e:
+            # Bot kanalda admin emas yoki kanal ID noto'g'ri bo'lsa shu yerga tushadi.
+            # Bunday holatda foydalanuvchini bloklab qo'ymaslik uchun
+            # ushbu kanalni "tekshirib bo'lmadi" deb belgilab, lekin xatoni logga yozamiz.
+            logger.error(
+                f"Kanal tekshirishda xatolik (chat_id={kanal['channel_id']}): {e}. "
+                f"Bot shu kanalda ADMIN ekanligini va channel_id to'g'riligini tekshiring."
+            )
+        except Forbidden as e:
+            logger.error(
+                f"Botga kanal taqiqlangan (chat_id={kanal['channel_id']}): {e}"
+            )
+
+    return obuna_bolmagan
+
+
+def obuna_klaviaturasi(obuna_bolmagan_kanallar: list, tekshir_callback: str):
+    """Obuna bo'lmagan kanallar uchun tugmalar va 'Tekshirish' tugmasini yaratadi."""
+    keyboard = [
+        [InlineKeyboardButton(kanal["name"], url=kanal["url"])]
+        for kanal in obuna_bolmagan_kanallar
+    ]
+    keyboard.append(
+        [InlineKeyboardButton("✅ Obuna bo'ldim, tekshirish", callback_data=tekshir_callback)]
+    )
+    return InlineKeyboardMarkup(keyboard)
+
+
+async def obuna_talab_qil(message_yoki_query, obuna_bolmagan_kanallar: list, tekshir_callback: str, edit: bool = False):
+    """Foydalanuvchiga obuna bo'lish haqida xabar va tugmalarni ko'rsatadi."""
+    matn = (
+        "🔒 *Botdan foydalanish uchun avval quyidagi kanal(lar)ga obuna bo'ling:*\n\n"
+        "Obuna bo'lgach, pastdagi *\"✅ Obuna bo'ldim, tekshirish\"* tugmasini bosing."
+    )
+    markup = obuna_klaviaturasi(obuna_bolmagan_kanallar, tekshir_callback)
+
+    if edit:
+        try:
+            await message_yoki_query.edit_text(matn, parse_mode="Markdown", reply_markup=markup)
+        except BadRequest:
+            # Agar oldingi xabar rasm bo'lsa, edit_text ishlamaydi -> yangi xabar yuboramiz
+            await message_yoki_query.reply_text(matn, parse_mode="Markdown", reply_markup=markup)
+    else:
+        await message_yoki_query.reply_text(matn, parse_mode="Markdown", reply_markup=markup)
+
+
+# ═════════════════════════════════════════════
+
+
 def qismlar_klaviaturasi(anime_index: int):
     anime = ANIMALAR[anime_index]
     barcha = [
@@ -263,7 +361,21 @@ async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=Fals
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
     args = context.args
+
+    # ── Majburiy obunani tekshirish ──
+    obuna_bolmagan = await obunani_tekshir(user_id, context)
+    if obuna_bolmagan:
+        # Keyinroq "Tekshirish" tugmasi bosilganda qaysi anime ochilishi kerakligini eslab qolamiz
+        if args:
+            context.user_data["pending_start_arg"] = args[0]
+        else:
+            context.user_data.pop("pending_start_arg", None)
+
+        await obuna_talab_qil(update.message, obuna_bolmagan, tekshir_callback="tekshir_start")
+        return
+    # ── ───────────────────────── ──
 
     if args and args[0].startswith("anime_"):
         try:
@@ -282,8 +394,52 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
-    await query.answer()
     data = query.data
+    user_id = update.effective_user.id
+
+    # ── "Tekshirish" tugmasi bosilganda ──
+    if data == "tekshir_start":
+        obuna_bolmagan = await obunani_tekshir(user_id, context)
+
+        if obuna_bolmagan:
+            await query.answer("❌ Hali barcha kanallarga obuna bo'lmadingiz!", show_alert=True)
+            await obuna_talab_qil(
+                query.message, obuna_bolmagan, tekshir_callback="tekshir_start", edit=True
+            )
+            return
+
+        await query.answer("✅ Obuna tasdiqlandi!")
+
+        # Agar foydalanuvchi /start anime_<index> orqali kirmoqchi bo'lgan bo'lsa, shuni ochamiz
+        pending = context.user_data.pop("pending_start_arg", None)
+        if pending and pending.startswith("anime_"):
+            try:
+                anime_index = int(pending.split("_")[1])
+                if 0 <= anime_index < len(ANIMALAR):
+                    await query.message.delete()
+                    await anime_qismlari_yuborish(query.message, anime_index)
+                    return
+            except (ValueError, IndexError):
+                pass
+
+        await query.message.edit_text(
+            "🎌 Anime botiga *xush kelibsiz!*",
+            parse_mode="Markdown",
+        )
+        return
+    # ── ───────────────────────────── ──
+
+    # ── Boshqa har qanday tugma uchun ham obunani tekshiramiz ──
+    obuna_bolmagan = await obunani_tekshir(user_id, context)
+    if obuna_bolmagan:
+        await query.answer("❌ Avval kanal(lar)ga obuna bo'ling!", show_alert=True)
+        await obuna_talab_qil(
+            query.message, obuna_bolmagan, tekshir_callback="tekshir_start", edit=True
+        )
+        return
+    # ── ──────────────────────────────────────────────────── ──
+
+    await query.answer()
 
     if data.startswith("video_"):
         try:
