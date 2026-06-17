@@ -36,7 +36,7 @@ BOT_USERNAME = "@Animez1_bot"
 
 MAJBURIY_KANALLAR = [
     {
-        "channel_id": -1001234567890,          # ← o'zingizning kanal ID'ingizni kiriting
+        "channel_id": -1003817068566,          # ← o'zingizning kanal ID'ingizni kiriting
         "url": "https://t.me/Animeztv1",     # ← obuna havolasi
         "name": "📢 Kanalimiz",                  # ← tugma nomi
     },
