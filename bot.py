@@ -419,7 +419,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2023",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIET2ozuFVh0qWHgcEIYmjyUVAzDuolAAInHmsbefChSfpyz39adg2oAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIEfWo1UF1F2KlYEaPCZpQbo2bagEmJAAJwMQACN2JISfvdNPtYykZhPAQ"),
             ("2-qism","BAACAgIAAxkBAAIEf2o1UGSsmD87fsUBYcQAAdNCcYjtawACZC8AAocEAUoCrCLB0mgAAa08BA"),
@@ -439,19 +439,16 @@ ANIMALAR = [
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIET2ozuFVh0qWHgcEIYmjyUVAzDuolAAInHmsbefChSfpyz39adg2oAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
-            ("1-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("2-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("3-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("4-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("5-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("6-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("7-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("8-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("9-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("10-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
-            ("11-qism","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
+            ("1-qism","BAACAgIAAxkBAAIEl2o26ciK8Nwwf77mbIfT2QnCXgiKAALulAAClrf5Sv4W6l-ELPCAPAQ"),
+            ("2-qism","BAACAgIAAxkBAAIEmWo26c7FdyGsCFKmFGkqhfAwUw_eAAL1lAAClrf5Sheuozswt20tPAQ"),
+            ("3-qism","BAACAgIAAxkBAAIEm2o26dT7ohJ7otvwvJmLbv1ztySWAAL6lAAClrf5SgTrK3HCKx_qPAQ"),
+            ("4-qism","BAACAgIAAxkBAAIEnWo26doEZfrJFlR7wmBrYlBtbtQPAAL_lAAClrf5Stsb--c3KeusPAQ"),
+            ("5-qism","BAACAgIAAxkBAAIEn2o26ePbEzDlswq5tSSfMJfMJ8qwAAIElQAClrf5SkJ6QxKy3KhSPAQ"),
+            ("6-qism","BAACAgIAAxkBAAIEoWo26e4x5FC5fO2GSUSHk8qX1z42AAIHlQAClrf5SoZblzeJvBVJPAQ"),
+            ("7-qism","BAACAgIAAxkBAAIEo2o26fiNwF9ks0dmOvfssbK5PxjEAAINlQAClrf5St6H388u_fNTPAQ"),
+            ("8-qism","BAACAgIAAxkBAAIEpWo26f_wsAzRNlsFMC8oHKVBTq9VAAIYlQAClrf5SlSbLqkG9e_tPAQ"),
         ],
     },
         {
@@ -459,7 +456,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2026",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIET2ozuFVh0qWHgcEIYmjyUVAzDuolAAInHmsbefChSfpyz39adg2oAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIElWo26WMHomEBlrb07HqSBS1BGzTNAAJSJmsbrP-xSSdoo-rsRP1yAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
             ("2-film","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
         ],
