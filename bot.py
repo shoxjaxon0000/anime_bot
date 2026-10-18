@@ -1,4 +1,4 @@
-import asyncio
+import os
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 from telegram.constants import ChatMemberStatus
@@ -16,43 +16,30 @@ from telegram.ext import (
 # ✏️ SOZLAMALAR
 # ─────────────────────────────────────────────
 
-import os
-
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 BOT_USERNAME = "@Animezona1_bot"
 
 # ─────────────────────────────────────────────
 # 📢 MAJBURIY OBUNA SOZLAMALARI
-# ─────────────────────────────────────────────
-# Bot kanalga ADMIN qilib qo'shilgan bo'lishi SHART, aks holda
-# a'zolikni tekshira olmaydi.
-#
-# CHANNEL_ID  -> kanalning ID raqami (masalan: -1001234567890)
-#                Buni bilish uchun: kanalga biror xabarni botga forward qiling
-#                yoki @username_to_id_bot kabi yordamchi botlardan foydalaning.
-# CHANNEL_URL -> foydalanuvchi bosadigan obuna havolasi (https://t.me/...)
-# CHANNEL_NAME-> tugmada ko'rinadigan nom
-#
-# Yana kanal qo'shish kerak bo'lsa, shu ro'yxatga yana bitta dict qo'shing.
+# Bot kanalga ADMIN qilib qo'shilgan bo'lishi SHART.
 # ─────────────────────────────────────────────
 
 MAJBURIY_KANALLAR = [
     {
-        "channel_id": -1003817068566,          # ← o'zingizning kanal ID'ingizni kiriting
-        "url": "https://t.me/Animeztv1",     # ← obuna havolasi
-        "name": "📢 Kanalimiz",                  # ← tugma nomi
+        "channel_id": -1003817068566,
+        "url": "https://t.me/Animeztv1",
+        "name": "📢 Kanalimiz",
     },
     {
-        "channel_id": -1004095884973,          # ← o'zingizning kanal ID'ingizni kiriting
-        "url": "https://t.me/homeproduct1566",     # ← obuna havolasi
-        "name": "📢 Kanalimiz",                  # ← tugma nomi
+        "channel_id": -1004095884973,
+        "url": "https://t.me/homeproduct1566",
+        "name": "📢 Kanalimiz",
     },
 ]
 
 # ─────────────────────────────────────────────
 # RASM FILE_ID OLISH:
 # Botga rasm yuboring → bot PHOTO FILE_ID ni beradi
-# Shu file_id ni "rasm" maydoniga kiriting
 # ─────────────────────────────────────────────
 
 ANIMALAR = [
@@ -61,7 +48,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2018",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAMMatTBtVnHLvvmv52LkxHlwynEhiQAAg7oMRv6ByFI3G0cU7lMoucBAAMCAAN5AAM9BA",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAMMatTBtVnHLvvmv52LkxHlwynEhiQAAg7oMRv6ByFI3G0cU7lMoucBAAMCAAN5AAM9BA",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAMJatTBSqjMq4Bh2e1EXst5H_Btf_YAAs5BAAKwWAhL3B66thRqcy09BA"),
             ("2-qism","BAACAgIAAxkBAAMVatTGlStz9hCzT1-89TAwfvHsx2MAAl9FAALgASFLwf_a9uVZaeI9BA"),
@@ -94,7 +81,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2018",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBQWolZRdWAAGMqNm0SLn0KY_rD7fMHQACAh1rG57bKUldorQ01Mle4gEAAwIAA3kAAzsE",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAO1aiRYEpuXnJAo3V0HvnVkhQXZjCYAAh-mAAKe2yFJEsCjWsR_JKE7BA"),
             ("2-qism","BAACAgIAAxkBAAPCaiRbZPHM6wFvC-PATQR7ghDhTmUAAmKmAAKe2yFJN7McGc5YrH07BA"),
@@ -110,12 +97,12 @@ ANIMALAR = [
             ("12-qism","BAACAgIAAxkBAAPWaiRfuW3vkHYTVTdkbokOLYc1PoIAAqGmAAKe2yFJjtHX4pBHaIw7BA"),
         ],
     },
-     {
+    {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2018 kuz",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBu2oppToia9q9wx7R2_eEY8or_U93AAJFHWsbTV5JSc7qaCicv392AQADAgADeQADOwQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBhGompzz11QZhadIPTt8gzkruonEfAAKsXwACXfoYSD6_xJ7H-npdOwQ"),
             ("2-qism","BAACAgIAAxkBAAIBhmomp0Jr_Zu3XuRpvEuchw_JB4W2AAK0XwACXfoYSPCboS8kzJLJOwQ"),
@@ -125,12 +112,12 @@ ANIMALAR = [
             ("6-qism","BAACAgIAAxkBAAIBjmomp9mXibY0VXxkLrMS5eNAwCkjAALLXwACXfoYSNXPB6UAAZL4kjsE"),
         ],
     },
-     {
+    {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2021",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIBvWoppbN_ejcyww49xlN9pU9N5NKJAAJIHWsbTV5JSQkMzSdDep9YAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIBvWoppbN_ejcyww49xlN9pU9N5NKJAAJIHWsbTV5JSQkMzSdDep9YAQADAgADeQADOwQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIBv2oppkgGdXg47WBrysDFt5dB-bnbAALPXwACXfoYSGQKhXihPWsqOwQ"),
             ("2-qism","BAACAgIAAxkBAAIBwWopplP9Ef0H2fzNCmLSJ7ljIAkRAALUXwACXfoYSJmgUL-KEVhsOwQ"),
@@ -163,7 +150,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2023",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAICN2op0S7JDCROzCB5VFhFsQfAbiiaAAJmFWsbu-nRSjeA4rz6UTxMAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAICN2op0S7JDCROzCB5VFhFsQfAbiiaAAJmFWsbu-nRSjeA4rz6UTxMAQADAgADeQADOwQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAICOWop0TXvZCz9od1PeQ16flxFCwW7AAIsYQACXfoYSPX1fZ2x2hDfOwQ"),
             ("2-qism","BAACAgIAAxkBAAICO2op0TpHUBWjx5uYQNVU-nuU-UpLAAIvYQACXfoYSBtCxnwzdjwAATsE"),
@@ -175,7 +162,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2024",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAICP2op0ctKketzAuGUqhuBNQXIp1JjAAJtFWsbu-nRSi7ZwOHn3fscAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAICP2op0ctKketzAuGUqhuBNQXIp1JjAAJtFWsbu-nRSi7ZwOHn3fscAQADAgADeQADOwQ",
         "qismlar": [
             ("1-flim","BAACAgIAAxkBAAICQWop0dA0YlJQ2iZ4BzYVccJq9hMpAAJtYQACXfoYSOwCOCyTCB8-OwQ"),
         ],
@@ -185,7 +172,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2024",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAICQ2op08ahCNXUvXa-0EaiKdczEEkFAAJ2FWsbu-nRSt0XVDI8PIZqAQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAICQ2op08ahCNXUvXa-0EaiKdczEEkFAAJ2FWsbu-nRSt0XVDI8PIZqAQADAgADeQADOwQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAICRWop09Sr9f6UE36e9ISkSu5e7NQcAAJwYQACXfoYSG8wBvVT6vpMOwQ"),
             ("2-qism","BAACAgIAAxkBAAICRmop09QOtR_4lze3uK8UtjKNBUWmAAJ3YQACXfoYSM3nWoBPhgevOwQ"),
@@ -213,13 +200,12 @@ ANIMALAR = [
             ("24-qism","BAACAgIAAxkBAAICeWop1gaIW9P4Lm9NJWOWpuZQ1pydAAIWYgACXfoYSOyW0HEZHDBCOwQ"),
         ],
     },
-    
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 4 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2026",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIDPmoyVMA8uqNSYTVMWhxvLtx0fC0BAALGGWsb6huQSeCDCz0T-ggcAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgQAAxkBAAIDXmoyXppvApUqAdFQ7N9X0VND0BAGAAIIHgAC3LWxUgSNea-cxv1UPAQ"),
             ("2-qism","BAACAgIAAxkBAAIDYmoyXzXgDc3KfRCegG-6UeOmhotpAAI7owACeDnIStwpcFcdwzDvPAQ"),
@@ -234,12 +220,12 @@ ANIMALAR = [
             ("11-qism","BAACAgQAAxkBAAIEr2o4D5NCTgNj3q-XvwABUiRyTwABjYcAAnceAAJ8D7BR-CISWLBFeYI8BA"),
         ],
     },
-        {
+    {
         "nomi": "Tayoq va qilich 1 fasl",
         "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAyEFAATjg9gWAAMkajKpLhmsa1cM4yBXiLZ7PzMWsSIAAoUbaxvqG5hJIe-kQYbjsF4BAAMCAAN5AAM8BA",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAyEFAATjg9gWAAMkajKpLhmsa1cM4yBXiLZ7PzMWsSIAAoUbaxvqG5hJIe-kQYbjsF4BAAMCAAN5AAM8BA",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIDeWoye5-HMgK8oiZfhWF1pZcWHaSvAAKkTwAC9GZgSFerAAFgvEpxwDwE"),
             ("2-qism","BAACAgIAAxkBAAIDe2oye6TSrDLRXBlGKAVNQVdCyQIfAAIEVgACPS_5SJFEHk5JXJaoPAQ"),
@@ -255,12 +241,12 @@ ANIMALAR = [
             ("12-qism","BAACAgEAAxkBAAIDj2oynh5NxI1gHt81IEQhpb1wpbcuAAL6CAACixvJRy-hzT2Kv99jPAQ"),
         ],
     },
-         {
+    {
         "nomi": "Tayoq va qilich 2 fasl",
         "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
         "yili": "2026",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAyEFAATjg9gWAAMlajKp0HdsF5pIgHJ0aDeCJypAze8AAoYbaxvqG5hJrii3a0kabN0BAAMCAAN5AAM8BA",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAyEFAATjg9gWAAMlajKp0HdsF5pIgHJ0aDeCJypAze8AAoYbaxvqG5hJrii3a0kabN0BAAMCAAN5AAM8BA",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIDkWoynwXmlw2A4pHIKg-4D8WSF8x2AAJVlwADvOlKu5ciGwAB4GxePAQ"),
             ("2-qism","BAACAgEAAxkBAAIDk2oynwrW_OIirCl5cZWZ0s3_qPnpAAJ9BwACSCsoR5xdtQtKERGVPAQ"),
@@ -274,12 +260,12 @@ ANIMALAR = [
             ("10-qism","BAACAgIAAxkBAAIDo2oyn0BlNRZQhkESbLeSQ0F6UYddAALFqgACqRp4SeBMxPQ_L4bfPAQ"),
         ],
     },
-      {
+    {
         "nomi": "Oy Sayohati O'zga Dunyo 1 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2022",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAID62oy52vVQVe7uuUPz64imVTkLTZCAAJ9KmsbefCZST5_w8ZVY5U5AQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAID62oy52vVQVe7uuUPz64imVTkLTZCAAJ9KmsbefCZST5_w8ZVY5U5AQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAyEFAATjg9gWAAMmajKuq3iK9S1zLcgcHW2_wDcM3ZMAAohCAAJE8fhJ6-Gon6XspjM8BA"),
             ("2-qism","BAACAgIAAxkBAAIDv2oyrx2sOJdVFRwfJ4F-JaceEFDQAAKGRgACZVMJSkImNZ1b5dv8PAQ"),
@@ -295,12 +281,12 @@ ANIMALAR = [
             ("12-qism","BAACAgIAAxkBAAID02oyr99LSoNb8wQF14LNJYE-pzTtAAIEQwACDScAAUuMzyeu2vZcmzwE"),
         ],
     },
-     {
+    {
         "nomi": "Oy Sayohati O'zga Dunyo 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAID6Woy52Pg6w2gRiUKOmyEIC0GsJSMAAJ8KmsbefCZSUAKs1DlTD5BAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAID6Woy52Pg6w2gRiUKOmyEIC0GsJSMAAJ8KmsbefCZSUAKs1DlTD5BAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAID1Woyr-UbTIBzSBp2nd18vbr84zQIAAJaOwACKt7xSJQMHy1qpLwmPAQ"),
             ("2-qism","BAACAgIAAxkBAAID12oy5j9lkrgVCY3QRL0WP-4t35-1AAK-RQACjTY5SaS5TD7C1gHjPAQ"),
@@ -329,12 +315,12 @@ ANIMALAR = [
             ("25-qism","BAACAgIAAxkBAAIECWoy5_O9S_2ejk8ZJO-Qie3QgOhyAAJfSAACeabJS2oG6pU4W133PAQ"),
         ],
     },
-         {
+    {
         "nomi": "Iblislar Qotili 1 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2019",
         "sifat": " 480, 720p",
-        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIEEWozq1aA9SOMEC1aCIHeCg6cx1nEAAKiBAACKf-4Sd_vQa8wb0TfPAQ"),
             ("2-qism","BAACAgIAAxkBAAIEE2ozq8iDr7a7mNkhEdoqd0gB6jizAAIlBAACdQspSiVpQ8UJaMkhPAQ"),
@@ -367,22 +353,22 @@ ANIMALAR = [
             ("3-ovil","BAACAgIAAxkBAAIESWozrKo5YL9QUcEH0SHfnJLM7iKZAAJNIwACuqJwS6hIunJx26cTPAQ"),
         ],
     },
-     {
+    {
         "nomi": "Iblislar Qotili Cheksiz poezd 1 film",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2020",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIET2ozuFVh0qWHgcEIYmjyUVAzDuolAAInHmsbefChSfpyz39adg2oAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIET2ozuFVh0qWHgcEIYmjyUVAzDuolAAInHmsbefChSfpyz39adg2oAQADAgADeQADPAQ",
         "qismlar": [
             ("1-film","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
         ],
     },
-     {
+    {
         "nomi": "Iblislar Qotili 2 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2021",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIEk2o1UwsWa0Ig_KhrZsOPmVvRhPJzAALjGGsbIKCwSSyPan1dfxAtAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIEk2o1UwsWa0Ig_KhrZsOPmVvRhPJzAALjGGsbIKCwSSyPan1dfxAtAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIEX2o1TlWMMAylpo5u0bd0-Jk1a3_sAAL_FQACVA2ZS3v4npaEtgoiPAQ"),
             ("2-qism","BAACAgIAAxkBAAIEYWo1TmNXeX2qoKwa1KKtWrEfRjMjAAJLEQACPDioS8sN9bGVauALPAQ"),
@@ -393,7 +379,7 @@ ANIMALAR = [
             ("7-qism","BAACAgIAAxkBAAIEa2o1ToU-lYK3hVeoZ9eFn5c05xLDAAJUGQACuZcoSEVqUejSd97iPAQ"),
             ("8-qism","BAACAgIAAxkBAAIEbWo1Toyr7UsAARUB_Np4rjlU0JVXfwACWBkAArmXKEj7kSCpZv-H0TwE"),
             ("9-qism","BAACAgIAAxkBAAIEb2o1TpLVlysMVNLIP3RnFTJXy8LjAAJcGQACuZcoSOiLuNfGIepOPAQ"),
-            ("10-qism","BAACAgIAAxkBAAIEcWo1Tprq3QS-ToDBo0Z3brtE1buuAAL7FQACcbPASP6VOK4zbgOkPAQ"),    
+            ("10-qism","BAACAgIAAxkBAAIEcWo1Tprq3QS-ToDBo0Z3brtE1buuAAL7FQACcbPASP6VOK4zbgOkPAQ"),
             ("11-qism","BAACAgIAAxkBAAIEc2o1TqJ9J2Cuz-YOC9XdgQNI7AIvAALrEwACV4y5SCdrvnrktCwnPAQ"),
             ("1-ovil","BAACAgIAAxkBAAIEdWo1TqmFuamTHJPoW9oWCH3_0HxoAAKBIgAC320AAUu95tDXL2wTuDwE"),
             ("2-ovil","BAACAgIAAxkBAAIEd2o1Tq6LabyzJ4_Var0zPxfws8fQAALZJAAC320IS5L5ms9Ck7ZrPAQ"),
@@ -406,7 +392,7 @@ ANIMALAR = [
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2023",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIEfWo1UF1F2KlYEaPCZpQbo2bagEmJAAJwMQACN2JISfvdNPtYykZhPAQ"),
             ("2-qism","BAACAgIAAxkBAAIEf2o1UGSsmD87fsUBYcQAAdNCcYjtawACZC8AAocEAUoCrCLB0mgAAa08BA"),
@@ -421,12 +407,12 @@ ANIMALAR = [
             ("11-qism","BAACAgIAAxkBAAIEkWo1UKz7F1MBpdsRBWzkDPzKsmVsAAJuOQACbNGBSR2fDEgx5_GJPAQ"),
         ],
     },
-        {
+    {
         "nomi": "Iblislar Qotili 4 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAxkBAAIEl2o26ciK8Nwwf77mbIfT2QnCXgiKAALulAAClrf5Sv4W6l-ELPCAPAQ"),
             ("2-qism","BAACAgIAAxkBAAIEmWo26c7FdyGsCFKmFGkqhfAwUw_eAAL1lAAClrf5Sheuozswt20tPAQ"),
@@ -438,22 +424,22 @@ ANIMALAR = [
             ("8-qism","BAACAgIAAxkBAAIEpWo26f_wsAzRNlsFMC8oHKVBTq9VAAIYlQAClrf5SlSbLqkG9e_tPAQ"),
         ],
     },
-        {
+    {
         "nomi": "Iblislar Qotili Cheksiz poezd 2 film",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
         "yili": "2026",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIElWo26WMHomEBlrb07HqSBS1BGzTNAAJSJmsbrP-xSSdoo-rsRP1yAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIElWo26WMHomEBlrb07HqSBS1BGzTNAAJSJmsbrP-xSSdoo-rsRP1yAQADAgADeQADPAQ",
         "qismlar": [
             ("2-film","BAACAgIAAxkBAAIES2ozrLUct9PnAAFonQrU3Ljh2dbJFwACehEAApEJkUlNCtcDxo1eEzwE"),
         ],
     },
-       {
+    {
         "nomi": "Qalqon qahramon 1 fasl",
         "janrlari": "Janrlari: Ekshen, Romantika, Boshqa dunyo, Drama, Sarguzasht",
         "yili": "2025",
         "sifat": "720p, 1080p",
-        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
+        "rasm": "AgACAgIAAxkBAAIETWozuEuBUWfTafXx84_tsZ6KU0pjAAImHmsbefChSU8kN2mVs33RAQADAgADeQADPAQ",
         "qismlar": [
             ("1-qism","BAACAgIAAyEFAATjg9gWAAMvajgQtfyDYwT0Rrn_6-QlEFG6ORAAAg8EAAKsnUlKjqvGVW1tZpo8BA"),
             ("2-qism","BAACAgIAAxkBAAIEs2o4EMny74R2rezsYv_8VvKnrvyOAAJrAwAClvoBS4HCZjpgKZmmPAQ"),
@@ -485,8 +471,9 @@ ANIMALAR = [
     # Keyingi anime qo'shish uchun:
     # {
     #     "nomi": "Boshqa Anime",
-    #     "emoji": "⭐",
-    #     "tavsif": "Tavsif matni",
+    #     "janrlari": "Janrlari: ...",
+    #     "yili": "2026",
+    #     "sifat": "720p, 1080p",
     #     "rasm": "PHOTO_FILE_ID_BU_YERGA",
     #     "qismlar": [
     #         ("1-qism", "FILE_ID_BU_YERGA"),
@@ -529,9 +516,6 @@ async def obunani_tekshir(user_id: int, context: ContextTypes.DEFAULT_TYPE) -> l
             if a_zo.status in OBUNA_BOLMAGAN_HOLATLAR:
                 obuna_bolmagan.append(kanal)
         except BadRequest as e:
-            # Bot kanalda admin emas yoki kanal ID noto'g'ri bo'lsa shu yerga tushadi.
-            # Bunday holatda foydalanuvchini bloklab qo'ymaslik uchun
-            # ushbu kanalni "tekshirib bo'lmadi" deb belgilab, lekin xatoni logga yozamiz.
             logger.error(
                 f"Kanal tekshirishda xatolik (chat_id={kanal['channel_id']}): {e}. "
                 f"Bot shu kanalda ADMIN ekanligini va channel_id to'g'riligini tekshiring."
@@ -568,7 +552,7 @@ async def obuna_talab_qil(message_yoki_query, obuna_bolmagan_kanallar: list, tek
         try:
             await message_yoki_query.edit_text(matn, parse_mode="Markdown", reply_markup=markup)
         except BadRequest:
-            # Agar oldingi xabar rasm bo'lsa, edit_text ishlamaydi -> yangi xabar yuboramiz
+            # Oldingi xabar rasm bo'lsa yoki matn o'zgarmagan bo'lsa -> yangi xabar yuboramiz
             await message_yoki_query.reply_text(matn, parse_mode="Markdown", reply_markup=markup)
     else:
         await message_yoki_query.reply_text(matn, parse_mode="Markdown", reply_markup=markup)
@@ -641,15 +625,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     args = context.args
 
     # ── Majburiy obunani tekshirish ──
+    # Vercel'da xotira saqlanmaydi, shuning uchun anime raqamini tugma ichiga yozamiz.
     obuna_bolmagan = await obunani_tekshir(user_id, context)
     if obuna_bolmagan:
-        # Keyinroq "Tekshirish" tugmasi bosilganda qaysi anime ochilishi kerakligini eslab qolamiz
-        if args:
-            context.user_data["pending_start_arg"] = args[0]
-        else:
-            context.user_data.pop("pending_start_arg", None)
-
-        await obuna_talab_qil(update.message, obuna_bolmagan, tekshir_callback="tekshir_start")
+        cb = f"tekshir_{args[0]}" if args else "tekshir_"
+        await obuna_talab_qil(update.message, obuna_bolmagan, tekshir_callback=cb)
         return
     # ── ───────────────────────── ──
 
@@ -674,21 +654,20 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
 
     # ── "Tekshirish" tugmasi bosilganda ──
-    if data == "tekshir_start":
+    if data.startswith("tekshir_"):
         obuna_bolmagan = await obunani_tekshir(user_id, context)
 
         if obuna_bolmagan:
             await query.answer("❌ Hali barcha kanallarga obuna bo'lmadingiz!", show_alert=True)
             await obuna_talab_qil(
-                query.message, obuna_bolmagan, tekshir_callback="tekshir_start", edit=True
+                query.message, obuna_bolmagan, tekshir_callback=data, edit=True
             )
             return
 
         await query.answer("✅ Obuna tasdiqlandi!")
 
-        # Agar foydalanuvchi /start anime_<index> orqali kirmoqchi bo'lgan bo'lsa, shuni ochamiz
-        pending = context.user_data.pop("pending_start_arg", None)
-        if pending and pending.startswith("anime_"):
+        pending = data[len("tekshir_"):]
+        if pending.startswith("anime_"):
             try:
                 anime_index = int(pending.split("_")[1])
                 if 0 <= anime_index < len(ANIMALAR):
@@ -710,7 +689,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if obuna_bolmagan:
         await query.answer("❌ Avval kanal(lar)ga obuna bo'ling!", show_alert=True)
         await obuna_talab_qil(
-            query.message, obuna_bolmagan, tekshir_callback="tekshir_start", edit=True
+            query.message, obuna_bolmagan, tekshir_callback="tekshir_", edit=True
         )
         return
     # ── ──────────────────────────────────────────────────── ──
@@ -721,7 +700,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         try:
             parts = data.split("_")
             anime_index = int(parts[1])
-            qism_index  = int(parts[2])
+            qism_index = int(parts[2])
 
             anime = ANIMALAR[anime_index]
             qism_nomi, file_id = anime["qismlar"][qism_index]
@@ -733,7 +712,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     f"Qism: {qism_nomi}\n\n"
                     f"Janrlari: *{anime['janrlari']}*\n\n"
                     f"Yili: *{anime['yili']}*\n\n"
-                    f"Sifat: *{anime['sifat']}*\n\n"                
+                    f"Sifat: *{anime['sifat']}*\n\n"
                 ),
                 parse_mode="Markdown",
             )
@@ -775,28 +754,10 @@ async def get_file_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 
-def main():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
-    port = int(os.environ.get("PORT", 8000))
-    webhook_url = (os.environ.get("WEBHOOK_URL") or os.environ["RENDER_EXTERNAL_URL"]).rstrip("/")
-
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
+def build_application():
+    """Vercel (webhook) uchun: updater=None, chunki Vercel doimiy server emas."""
+    app = ApplicationBuilder().token(BOT_TOKEN).updater(None).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, get_file_id))
-
-    logger.info("Bot ishga tushdi (webhook) ✅")
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=port,
-        url_path="webhook",
-        webhook_url=f"{webhook_url}/webhook",
-        allowed_updates=Update.ALL_TYPES,
-        close_loop=False,
-    )
-
-
-if __name__ == "__main__":
-    main()
+    return app
