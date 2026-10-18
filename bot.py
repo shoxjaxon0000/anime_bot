@@ -16,7 +16,9 @@ from telegram.ext import (
 # ✏️ SOZLAMALAR
 # ─────────────────────────────────────────────
 
-BOT_TOKEN = "8890938686:AAF35bXN90eNd2fRUFje12sZS0cL9LNDf7o"
+import os
+
+BOT_TOKEN = os.environ["8890938686:AAGNyY-XDc4jCmbnxpHqNXp11AzyQf-WOm0"]
 BOT_USERNAME = "@Animez1_bot"
 
 # ─────────────────────────────────────────────
@@ -777,13 +779,23 @@ def main():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
 
+    port = int(os.environ.get("PORT", 8000))
+   webhook_url = (os.environ.get("WEBHOOK_URL") or os.environ["RENDER_EXTERNAL_URL"]).rstrip("/")
+
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.VIDEO | filters.PHOTO, get_file_id))
 
-    logger.info("Bot ishga tushdi ✅")
-    app.run_polling(allowed_updates=Update.ALL_TYPES, close_loop=False)
+    logger.info("Bot ishga tushdi (webhook) ✅")
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=port,
+        url_path="webhook",
+        webhook_url=f"{webhook_url}/webhook",
+        allowed_updates=Update.ALL_TYPES,
+        close_loop=False,
+    )
 
 
 if __name__ == "__main__":
