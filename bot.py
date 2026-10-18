@@ -18,7 +18,7 @@ from telegram.ext import (
 
 import os
 
-BOT_TOKEN = os.environ["8945371064:AAE_DFQhT8PyveTJydgKrxdj9PeDIOcn2zg"]
+BOT_TOKEN = os.environ["BOT_TOKEN"]
 BOT_USERNAME = "@Animezona1_bot"
 
 # ─────────────────────────────────────────────
