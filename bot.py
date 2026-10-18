@@ -18,8 +18,8 @@ from telegram.ext import (
 
 import os
 
-BOT_TOKEN = os.environ["8890938686:AAFWOQPZOYpO_dS8VZm06ydAf12hpPJoK-Q"]
-BOT_USERNAME = "@Animez1_bot"
+BOT_TOKEN = os.environ["8945371064:AAE_DFQhT8PyveTJydgKrxdj9PeDIOcn2zg"]
+BOT_USERNAME = "@Animezona1_bot"
 
 # ─────────────────────────────────────────────
 # 📢 MAJBURIY OBUNA SOZLAMALARI
