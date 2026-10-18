@@ -63,7 +63,7 @@ ANIMALAR = [
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBP2olZQWp61sfn8FYJlzHR1bkL23vAAIBHWsbntspSWKxxku7y2i0AQADAgADeQADOwQ",  # ← botga rasm yuboring, file_id ni shu yerga kiriting
         "qismlar": [
-            ("1-qism","BAACAgIAAxkBAAOmaiQ-TTBlJTedh37EJ1lQCALOTMsAAuikAAKe2yFJceK8xOoUnHY7BA"),
+            ("1-qism","BAACAgIAAxkBAAMJatTBSqjMq4Bh2e1EXst5H_Btf_YAAs5BAAKwWAhL3B66thRqcy09BA"),
             ("2-qism","BAACAgIAAxkBAAOsaiRVgiGA_oaWELYMhoCC5GSLDyUAAgOmAAKe2yFJUW4ZKdcuJqg7BA"),
             ("3-qism","BAACAgIAAxkBAAOuaiRVxC_eE_ZMecFNn5WqpIqLxqAAAgamAAKe2yFJCWy93UCaqQs7BA"),
             ("4-qism","BAACAgIAAxkBAAPaaiRxtyP15OZJCbx7R13UH1j01RIAAlynAAKe2yFJpXT67IegR9A7BA"),
