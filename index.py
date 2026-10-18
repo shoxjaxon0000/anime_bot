@@ -5,7 +5,7 @@ from telegram import Update
 
 from bot import build_application
 
-application = build_application()
+tg_app = build_application()
 _lock = asyncio.Lock()
 _ready = False
 
@@ -15,7 +15,7 @@ async def ensure_ready():
     if not _ready:
         async with _lock:
             if not _ready:
-                await application.initialize()
+                await tg_app.initialize()
                 _ready = True
 
 
@@ -31,6 +31,6 @@ async def root():
 async def webhook(request: Request):
     await ensure_ready()
     data = await request.json()
-    update = Update.de_json(data, application.bot)
-    await application.process_update(update)
+    update = Update.de_json(data, tg_app.bot)
+    await tg_app.process_update(update)
     return Response(status_code=200)
