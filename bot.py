@@ -780,7 +780,7 @@ def main():
     asyncio.set_event_loop(loop)
 
     port = int(os.environ.get("PORT", 8000))
-   webhook_url = (os.environ.get("WEBHOOK_URL") or os.environ["RENDER_EXTERNAL_URL"]).rstrip("/")
+    webhook_url = (os.environ.get("WEBHOOK_URL") or os.environ["RENDER_EXTERNAL_URL"]).rstrip("/")
 
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
