@@ -26,10 +26,10 @@ BOT_USERNAME = "@Animezona1_bot"
 
 MAJBURIY_KANALLAR = [
     {
-        "channel_id": -1003817068566,
-        "url": "https://t.me/Animeztv1",
-        "name": "📢 Kanalimiz",
-    },
+    "channel_id": "@Animezonauz",
+    "url": "https://t.me/Animezonauz",
+    "name": "📢 Kanalimiz",
+},
     {
         "channel_id": -1004095884973,
         "url": "https://t.me/homeproduct1566",
@@ -510,10 +510,6 @@ OBUNA_BOLMAGAN_HOLATLAR = {
 
 
 async def obunani_tekshir(user_id: int, context: ContextTypes.DEFAULT_TYPE) -> list:
-    """
-    Foydalanuvchini barcha majburiy kanallarga a'zoligini tekshiradi.
-    Qaytaradi: a'zo BO'LMAGAN kanallar ro'yxati (bo'sh ro'yxat = hammasiga a'zo).
-    """
     obuna_bolmagan = []
 
     for kanal in MAJBURIY_KANALLAR:
@@ -521,19 +517,22 @@ async def obunani_tekshir(user_id: int, context: ContextTypes.DEFAULT_TYPE) -> l
             a_zo = await context.bot.get_chat_member(
                 chat_id=kanal["channel_id"], user_id=user_id
             )
-            if a_zo.status in OBUNA_BOLMAGAN_HOLATLAR:
+            holat = a_zo.status
+            azo_emas = holat in (ChatMemberStatus.LEFT, ChatMemberStatus.BANNED) or (
+                holat == ChatMemberStatus.RESTRICTED and not a_zo.is_member
+            )
+            if azo_emas:
                 obuna_bolmagan.append(kanal)
-        except BadRequest as e:
+        except (BadRequest, Forbidden) as e:
             logger.error(
-                f"Kanal tekshirishda xatolik (chat_id={kanal['channel_id']}): {e}. "
-                f"Bot shu kanalda ADMIN ekanligini va channel_id to'g'riligini tekshiring."
+                f"Kanal tekshirishda xatolik (chat_id={kanal['channel_id']}): {e}"
             )
-        except Forbidden as e:
-            logger.error(
-                f"Botga kanal taqiqlangan (chat_id={kanal['channel_id']}): {e}"
-            )
+            obuna_bolmagan.append(kanal)
 
     return obuna_bolmagan
+
+
+def obuna_klaviaturasi(obuna_bolmagan_kanallar: list, tekshir_callback: str):
 
 
 def obuna_klaviaturasi(obuna_bolmagan_kanallar: list, tekshir_callback: str):
