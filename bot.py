@@ -502,6 +502,14 @@ logger = logging.getLogger(__name__)
 # ═════════════════════════════════════════════
 # 📢 MAJBURIY OBUNA YORDAMCHI FUNKSIYALARI
 # ═════════════════════════════════════════════
+# ═════════════════════════════════════════════
+# 📢 MAJBURIY OBUNA YORDAMCHI FUNKSIYALARI
+# ═════════════════════════════════════════════
+
+OBUNA_BOLMAGAN_HOLATLAR = {
+    ChatMemberStatus.LEFT,
+    ChatMemberStatus.BANNED,
+}
 
 async def obunani_tekshir(user_id: int, context: ContextTypes.DEFAULT_TYPE) -> list:
     """
