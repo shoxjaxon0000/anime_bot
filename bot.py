@@ -322,7 +322,7 @@ ANIMALAR = [
         "sifat": " 480, 720p",
         "rasm": "",
         "qismlar": [
-            ("1-qism","),
+            ("1-qism",""),
             ("2-qism",""),
             ("3-qism",""),
             ("4-qism",""),
