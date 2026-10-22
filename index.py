@@ -1,24 +1,13 @@
-import asyncio
+import logging
 
 from fastapi import FastAPI, Request, Response
 from telegram import Update
 
 from bot import build_application
 
+logger = logging.getLogger(__name__)
+
 tg_app = build_application()
-_lock = asyncio.Lock()
-_ready = False
-
-
-async def ensure_ready():
-    global _ready
-    if not _ready:
-        async with _lock:
-            if not _ready:
-                await tg_app.initialize()
-                _ready = True
-
-
 app = FastAPI()
 
 
@@ -29,8 +18,11 @@ async def root():
 
 @app.post("/webhook")
 async def webhook(request: Request):
-    await ensure_ready()
-    data = await request.json()
-    update = Update.de_json(data, tg_app.bot)
-    await tg_app.process_update(update)
+    try:
+        data = await request.json()
+        async with tg_app:
+            update = Update.de_json(data, tg_app.bot)
+            await tg_app.process_update(update)
+    except Exception:
+        logger.exception("webhook xatosi")
     return Response(status_code=200)
