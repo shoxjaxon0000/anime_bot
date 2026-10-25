@@ -660,7 +660,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             pass
 
     await update.message.reply_text(
-        "🎌 Anime botiga *xush kelibsiz!*",
+        "🎌 Anime botiga *xush kelibsiz!* @Animezonauz kanaldani anime tanlang",
         parse_mode="Markdown",
     )
 
