@@ -610,6 +610,7 @@ async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=Fals
         f"Yili: *{anime['yili']}*\n\n"
         f"Sifat: *{anime['sifat']}*\n\n"
         f"Qism: *{len(anime['qismlar'])}*\n\n"
+        f"Telegram Kanal: @Animezonauz\n\n"
     )
     markup = qismlar_klaviaturasi(anime_index)
     rasm = anime.get("rasm")
