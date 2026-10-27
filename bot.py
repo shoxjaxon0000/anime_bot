@@ -46,7 +46,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2018",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAMMatTBtVnHLvvmv52LkxHlwynEhiQAAg7oMRv6ByFI3G0cU7lMoucBAAMCAAN5AAM9BA",
         "qismlar": [
@@ -79,7 +78,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq kundaligi",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2018",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAP9atjciDv3wf54e_7xb9X4mZ9gntQAArcVaxtGOjBJNLNQ7_36ZuMBAAMCAAN5AAM9BA",
         "qismlar": [
@@ -100,7 +98,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovil",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2018 kuz",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAP_atjcnHb0IUnS-22MITwjmXjnD6YAAkUdaxtNXklJ4V3PO9osuJUBAAMCAAN5AAM9BA",
         "qismlar": [
@@ -115,7 +112,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2021",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBDWrY3kMz6YQMwESk7P8f8e0R2P5AAAJIHWsbTV5JSXx8z8CxNt1WAQADAgADeQADPQQ",
         "qismlar": [
@@ -148,7 +144,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida ovli 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2023",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBD2rY3kn69yoP_Nm6AAGvBC9UOlJP6AACZhVrG7vp0Upht7c7rkzH3QEAAwIAA3kAAz0E",
         "qismlar": [
@@ -160,7 +155,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 1-film",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2024",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBEWrY3k6p56T5LhWw6gpcosaKz49IAAJtFWsbu-nRSibZqr8uw3WKAQADAgADeQADPQQ",
         "qismlar": [
@@ -170,7 +164,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 3 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2024",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBumrZ5gM595pSfIpI3J0ls0glCyDmAAJ2FWsbu-nRSlK5Dq30fmh6AQADAgADeQADPQQ",
         "qismlar": [
@@ -203,7 +196,6 @@ ANIMALAR = [
     {
         "nomi": "Shilliq sifatida qayta tug'ilganim haqida 4 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2026",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIBvGrZ5gxc1-N8v5O60xxmd4uWxJ0hAALGGWsb6huQSXUktKB37jlVAQADAgADeQADPQQ",
         "qismlar": [
@@ -236,7 +228,6 @@ ANIMALAR = [
     {
         "nomi": "Tayoq va qilich 1 fasl",
         "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
-        "yili": "2025",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICHmrZ634-baSgoQrfSYEh6DC7GZw_AAKFG2sb6huYScQCKfQsskBOAQADAgADeQADPQQ",
         "qismlar": [
@@ -257,7 +248,6 @@ ANIMALAR = [
     {
         "nomi": "Tayoq va qilich 2 fasl",
         "janrlari": "Janrlari: Sarguzasht, Comedy, Fantasy, Ramantik",
-        "yili": "2026",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICIGrZ64KeX8NB9hdpZLhKhF3oGx-wAAKGG2sb6huYSWEWkt4NP7NYAQADAgADeQADPQQ",
         "qismlar": [
@@ -278,7 +268,6 @@ ANIMALAR = [
     {
         "nomi": "Oy Sayohati O'zga Dunyo 1 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2022",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAyEFAATjg9gWAAMnatoPGkJB6njpjIFbCZClKvzcWbYAAn0qaxt58JlJpP9LYpOHiSQBAAMCAAN5AAM9BA",
         "qismlar": [
@@ -299,7 +288,6 @@ ANIMALAR = [
     {
         "nomi": "Oy Sayohati O'zga Dunyo 2 fasl",
         "janrlari": "Janrlari: Isekai, Sarguzasht, Comedy, Drama, Fantasy, Action",
-        "yili": "2025",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIClmraNJjatDKoQbZUW5jpKFA39CA7AAJ8KmsbefCZSV386xJLuKwjAQADAgADeQADPQQ",
         "qismlar": [
@@ -333,7 +321,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili 1 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2019",
         "sifat": " 480, 720p",
         "rasm": "AgACAgIAAxkBAAICmGraNJ8QMpw95rwiUXrcTiSLpGgHAALYIWsbISK4STEarRt1_gxRAQADAgADeQADPQQ",
         "qismlar": [
@@ -368,7 +355,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili Cheksiz poezd 1 film",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2020",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICmmraNKVeSNS3m_1Sub-M4uRxKRWkAAL6IWsbISK4STjuQ29dHO_nAQADAgADeQADPQQ",
         "qismlar": [
@@ -378,7 +364,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili 2 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2021",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICnGraNKuCZUkNreUUxZ8fmcJA9QfsAALAHGsbH6PBSSyDiStKY3ApAQADAgADeQADPQQ",
         "qismlar": [
@@ -398,7 +383,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili 3 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2023",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICnmraNQZ6fcCN2x5EWRpM5CP7I3-VAAILG2sbypDBSV6tNteNOHMgAQADAgADeQADPQQ",
         "qismlar": [
@@ -418,7 +402,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili 4 fasl",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2025",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICnmraNQZ6fcCN2x5EWRpM5CP7I3-VAAILG2sbypDBSV6tNteNOHMgAQADAgADeQADPQQ",
         "qismlar": [
@@ -435,7 +418,6 @@ ANIMALAR = [
     {
         "nomi": "Iblislar Qotili Cheksiz poezd 2 film",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2026",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIComraNRAwli-mRUuG50eEGPaV93CdAALxG2sbypDBSd85TMWo_9zWAQADAgADeQADPQQ",
         "qismlar": [
@@ -445,7 +427,6 @@ ANIMALAR = [
     {
         "nomi": "Qalqon qahramon 1 fasl",
         "janrlari": "Janrlari: Ekshen, Romantika, Boshqa dunyo, Drama, Sarguzasht",
-        "yili": "2025",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAICpGraNRTj7SIEI5WGUWWSJkxrOUG-AAIFHGsbypDBSR-VjubOOQMXAQADAgADeQADPQQ",
         "qismlar": [
@@ -479,11 +460,71 @@ ANIMALAR = [
       {
         "nomi": "Iblislar Qotili Cheksiz poezd 3 fanat film",
         "janrlari": "Janrlari: Sarguzasht, Fantastika, Komediya, Iblislar, Tarixiy",
-        "yili": "2026",
         "sifat": "720p, 1080p",
         "rasm": "AgACAgIAAxkBAAIDOWrd5IFSLC6O7QT_cT8UvHhYUuXBAALF9TEbIms4SJUh3GpbtGpYAQADAgADeQADPQQ",
         "qismlar": [
             ("3-fanat film","BAACAgQAAxkBAAIDN2rdyOkoEHt-hCdSqMTpOkos_zMgAAIiHAAC99M4UMZLikrlxwQCPQQ"),
+        ],
+    },
+        {
+        "nomi": "Qalqon qahramon 2 fasl",
+        "janrlari": "Janrlari: Ekshen, Romantika, Boshqa dunyo, Drama, Sarguzasht",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAIDlWrgV9ubtdJCfnleYjhA3X-E9qEZAAIT5TEbSzngSpwtyZtshJeBAQADAgADeAADPQQ",
+        "qismlar": [
+            ("1-qism","BAACAgEAAxkBAAIDe2rgVh7erowC7Ah0ncE9BkdOpCotAAI0BAACvhQRRx6_eGAjuz5oPQQ"),
+            ("2-qism","BAACAgEAAxkBAAIDfWrgViZr7-EFoPjHLivyTPbUIetTAAIdBQACrAEgR2e7IQ16DfilPQQ"),
+            ("3-qism","BAACAgEAAxkBAAIDf2rgVivsBUXFpbhYqFdF2IDFxoDeAAIqBAACWNUxR7BuWrTezEDsPQQ"),
+            ("4-qism","BAACAgEAAxkBAAIDgWrgVjEnBLBAV92fomulwiyI_jI9AAIiBQACrBtxR0FVtEW4cBgZPQQ"),
+            ("5-qism","BAACAgEAAxkBAAIDg2rgVjnyENtuR5OZqoR0iUWjThHMAAKiBAACrBt5R8gOftGl75yXPQQ"),
+            ("6-qism","BAACAgEAAxkBAAIDhWrgVj7P3QpLlQ3dE1DRLSHOjQuMAALlBAACNEboR5QN4cCssDPqPQQ"),
+            ("7-qism","BAACAgEAAxkBAAIDh2rgVkPNKVyS22pr7GoHya9WuaSOAAKNBAACTocBRDuwWLYt72grPQQ"),
+            ("8-qism","BAACAgEAAxkBAAIDiWrgVkrk7JCBSJJs-8OH7SHDN4oAA20FAAKc5KlEA8M2Jx7g-Gg9BA"),
+            ("9-qism","BAACAgEAAxkBAAIDi2rgVl1VXHMhhDSViVyt8BB5vOzYAAKcBQACgDbxRRKSENK16RmgPQQ"),
+            ("10-qism","BAACAgIAAxkBAAIDjWrgVmSI2LkOilakgC7M4HnoubSmAAJhawACOgTpSF4rzAsnJm3LPQQ"),
+            ("11-qism","BAACAgIAAxkBAAIDj2rgVmt2AAFTaxaL4n-QTM0miEXl9wACo2sAAs7YEElCby3b5KxewT0E"),
+            ("12-qism","BAACAgIAAxkBAAIDkWrgVnKVFVDgkIxMum6dmKo7LiTFAAJtKAAC6c6oSF5Sl6XsTegNPQQ"),
+            ("13-qism","BAACAgIAAxkBAAIDk2rgVnrmZRTr_pLeqvQuubEeW5aeAAL8JQACkEXQSHenIEPsW5rLPQQ"),
+        ],
+    },
+      {
+        "nomi": "Qalqon qahramon 3 fasl",
+        "janrlari": "Janrlari: Ekshen, Romantika, Boshqa dunyo, Drama, Sarguzasht",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAIDl2rgWInT6MJ1OaFZ-oBemZPx0HvlAAJJ5zEbSzngSpXrHzSp3hk8AQADAgADeAADPQQ",
+        "qismlar": [
+            ("1-qism",""),
+            ("2-qism",""),
+            ("3-qism",""),
+            ("4-qism",""),
+            ("5-qism",""),
+            ("6-qism",""),
+            ("7-qism",""),
+            ("8-qism",""),
+            ("9-qism",""),
+            ("10-qism",""),
+            ("11-qism",""),
+            ("12-qism",""),        
+        ],
+    },
+     {
+        "nomi": "Qalqon qahramon 4 fasl",
+        "janrlari": "Janrlari: Ekshen, Romantika, Boshqa dunyo, Drama, Sarguzasht",
+        "sifat": "720p, 1080p",
+        "rasm": "AgACAgIAAxkBAAIDmWrgWJGEURx49UYBoTsXpPJSJ3IaAAKQ-jEb8jEJShsBc1Xx10yxAQADAgADeQADPQQ",
+        "qismlar": [
+            ("1-qism",""),
+            ("2-qism",""),
+            ("3-qism",""),
+            ("4-qism",""),
+            ("5-qism",""),
+            ("6-qism",""),
+            ("7-qism",""),
+            ("8-qism",""),
+            ("9-qism",""),
+            ("10-qism",""),
+            ("11-qism",""),
+            ("12-qism",""),        
         ],
     },
     # Keyingi anime qo'shish uchun:
@@ -607,7 +648,6 @@ async def anime_qismlari_yuborish(update_or_message, anime_index: int, edit=Fals
     matn = (
         f"Nomi: *{anime['nomi']}*\n\n"
         f"Janrlari: *{anime['janrlari']}*\n\n"
-        f"Yili: *{anime['yili']}*\n\n"
         f"Sifat: *{anime['sifat']}*\n\n"
         f"Qism: *{len(anime['qismlar'])}*\n\n"
         f"Telegram Kanal: @Animezonauz\n\n"
